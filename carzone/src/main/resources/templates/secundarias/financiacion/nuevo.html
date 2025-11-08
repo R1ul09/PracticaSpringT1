@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva Financiación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1>Añadir Nueva Financiación</h1>
+        <form th:action="@{/financiaciones/crear}" th:object="${financiacion}" method="post">
+            <div class="mb-3">
+                <label for="tipoPlan" class="form-label">Tipo de Plan</label>
+                <input type="text" th:field="*{tipoPlan}" id="tipoPlan" class="form-control" placeholder="Ej: Plan 36 meses" required>
+            </div>
+            <div class="mb-3">
+                <label for="cuotaMensual" class="form-label">Cuota Mensual</label>
+                <input type="number" step="0.01" th:field="*{cuotaMensual}" id="cuotaMensual" class="form-control"
+                    placeholder="Ej: 350.75" required>
+            </div>
+            <div class="mb-3">
+                <label for="estado" class="form-label">Estado</label>
+                <input type="text" th:field="*{estado}" id="estado" class="form-control" placeholder="Ej: Pendiente, Aprobado" required>
+            </div>
+            <div class="mb-3">
+                <label for="usuario" class="form-label">Usuario (Cliente)</label>
+                <select th:field="*{usuario}" id="usuario" class="form-control" required>
+                    <option value="">Seleccione un Usuario</option>
+                    <option th:each="usuario : ${usuarios}" th:value="${usuario.id}" th:text="${usuario.nombre + ' ' + usuario.apellidos}"></option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-success">Guardar Financiación</button>
+            <a th:href="@{/financiaciones}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</body>
+
+</html>

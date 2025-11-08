@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Roles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div th:replace="fragments/menu :: menuSuperior"></div>
+
+    <div class="container mt-4">
+
+        <div th:fragment="alertas">
+            <div th:if="${success}" class="alert alert-success alert-dismissible fade show" role="alert">
+                <span th:text="${success}"></span>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+            </div>
+            <div th:if="${error}" class="alert alert-danger alert-dismissible fade show" role="alert">
+                <span th:text="${error}"></span>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        </div>
+
+        <h1>Lista de Roles</h1>
+        <a th:href="@{/roles/nuevo}" class="btn btn-primary mb-3">Crear Rol</a>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre de Rol</th>
+                    <th>Eliminar</th>
+                    <th>Modificar</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr th:each="rol : ${roles}">
+                    <td th:text="${rol.nombreRol}"></td>
+
+                    <td>
+                        <a th:href="@{/roles/eliminar/{id}(id=${rol.id})}" class="btn btn-danger btn-sm"
+                            data-bs-toggle="modal" data-bs-target="#confirmDeleteModal" th:data-id="${rol.id}">Eliminar
+                        </a>
+                    </td>
+
+                    <td>
+                        <a th:href="@{/roles/editar/{id}(id=${rol.id})}" class="btn btn-secondary btn-sm">
+                            Modificar
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Confirmar Eliminación</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ¿Estás seguro de que deseas eliminar el Rol con ID: <strong id="entidadId"></strong>?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <a href="#" id="confirmDeleteButton" class="btn btn-danger">Eliminar Rol</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let confirmDeleteModal = document.getElementById('confirmDeleteModal');
+
+        confirmDeleteModal.addEventListener('show.bs.modal', function (event) {
+            let button = event.relatedTarget;
+            let entidadId = button.getAttribute('data-id');
+
+            let modalEntidadId = confirmDeleteModal.querySelector('#entidadId');
+            let confirmDeleteButton = confirmDeleteModal.querySelector('#confirmDeleteButton');
+
+            modalEntidadId.textContent = entidadId;
+            confirmDeleteButton.href = '/roles/eliminar/' + entidadId;
+        });
+    </script>
+</body>
+
+</html>
