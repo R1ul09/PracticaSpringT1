@@ -36,6 +36,35 @@
             </tbody>
         </table>
 
+        <h1>Detalles de los Coches Asociados</h1>
+
+        <table class="table table-bordered table-striped" th:object="${coche}">
+
+            <tbody>
+                <tr>
+                    <th scope="row">Modelo</th>
+                    <!-- <td th:text="*{nombreMarca}"></td>-->
+                </tr>
+                <tr>
+                    <th scope="row">Año</th>
+                    <!-- <td th:text="*{paisOrigen}"></td>-->
+                </tr>
+                <tr>
+                    <th scope="row">Precio</th>
+                    <!-- <td th:text="*{fechaFundacion}"></td>-->
+                </tr>
+                <tr>
+                    <th scope="row">Color</th>
+                    <!-- <td th:text="*{sedeCentral}"></td>-->
+                </tr>
+                <tr>
+                    <th scope="row">Tipo Combustible</th>
+                    <!-- <td th:text="*{numModelosActivos}"></td>-->
+                </tr>
+            </tbody>
+            
+        </table>
+
         <a th:href="@{/marcas}" class="btn btn-secondary mt-3">Volver</a>
     
     </div>

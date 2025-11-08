@@ -75,9 +75,11 @@ public class rolController {
 
         Rol rol = new Rol();
 
-        if (!rolRepository.existsById(id))
+        if (!rolRepository.existsById(id)) {
             model.addAttribute("error", "El rol no Existe");
+        } else {
             rol = rolRepository.findById(id).get();
+        }
 
         model.addAttribute("rol", rol);
 

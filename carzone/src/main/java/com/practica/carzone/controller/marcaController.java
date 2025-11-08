@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.practica.carzone.model.Coche;
 import com.practica.carzone.model.Marca;
+import com.practica.carzone.repository.CocheRepository;
 import com.practica.carzone.repository.MarcaRepository;
 
 import org.springframework.ui.Model;
@@ -28,6 +30,9 @@ public class marcaController {
 
     @Autowired
     private MarcaRepository marcaRepository;
+
+    @Autowired
+    private CocheRepository cocheRepository;
 
     @GetMapping
     public String listaMarcas(Model model) {
@@ -78,9 +83,11 @@ public class marcaController {
 
         Marca marca = new Marca();
 
-        if (!marcaRepository.existsById(id))
+        if (!marcaRepository.existsById(id)) {
             model.addAttribute("error", "La marca no Existe");
+        } else {
             marca = marcaRepository.findById(id).get();
+        }
 
         model.addAttribute("marca", marca);
 
@@ -102,7 +109,9 @@ public class marcaController {
     @GetMapping("/ver/{id}")
     public String VerMarca(@PathVariable Long id, Model model) {
 
-        Marca marca = new Marca(); 
+        Marca marca = new Marca();
+
+        List<Coche> listaCoches = cocheRepository.findAll();
 
         if (!marcaRepository.existsById(id))
             model.addAttribute("error", "La marca no Existe");
@@ -110,6 +119,8 @@ public class marcaController {
             marca = marcaRepository.findById(id).get();
 
         model.addAttribute("marca", marca);
+
+        model.addAttribute("coches", listaCoches);
 
         return "principales/marca/detalle";
     }

@@ -99,6 +99,7 @@ public class citaController {
 
         if (!citaRepository.existsById(id)) {
             model.addAttribute("error", "La cita no Existe");
+        } else {
             cita = citaRepository.findById(id).get();
         }
 

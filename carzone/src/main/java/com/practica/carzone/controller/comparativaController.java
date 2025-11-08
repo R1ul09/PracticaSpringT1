@@ -76,10 +76,12 @@ public class comparativaController {
 
         Comparativa comparativa = new Comparativa();
 
-        if (!comparativaRepository.existsById(id))
+        if (!comparativaRepository.existsById(id)) {
             model.addAttribute("error", "La comparativa no Existe");
+        } else {
             comparativa = comparativaRepository.findById(id).get();
-
+        }
+            
         model.addAttribute("comparativa", comparativa);
 
         return "secundarias/comparativa/editar";

@@ -21,13 +21,13 @@
             </div>
             <div class="mb-3">
                 <label for="usuario" class="form-label">Usuario (Cliente)</label>
-                <select th:field="*{usuario}" id="usuario" class="form-control" required>
+                <select th:field="*{usuario.id}" id="usuario" class="form-control" required>
                     <option th:each="usuario : ${usuarios}" th:value="${usuario.id}" th:text="${usuario.nombre + ' ' + usuario.apellidos}"></option>
                 </select>
             </div>
             <div class="mb-3">
                 <label for="concesionario" class="form-label">Concesionario</label>
-                <select th:field="*{concesionario}" id="concesionario" class="form-control" required>
+                <select th:field="*{concesionario.id}" id="concesionario" class="form-control" required>
                     <option th:each="concesionario : ${concesionarios}" th:value="${concesionario.id}" th:text="${concesionario.nombre}"></option>
                 </select>
             </div>

@@ -18,7 +18,7 @@
             </div>
             <div class="mb-3">
                 <label for="marca" class="form-label">Marca</label>
-                <select th:field="*{marca}" id="marca" class="form-control" required>
+                <select th:field="*{marca.id}" id="marca" class="form-control" required>
                     <option th:each="marca : ${marcas}" th:value="${marca.id}" th:text="${marca.nombreMarca}"></option>
                 </select>
             </div>

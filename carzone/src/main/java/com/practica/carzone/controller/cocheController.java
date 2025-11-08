@@ -89,6 +89,7 @@ public class cocheController {
 
         if (!cocheRepository.existsById(id)){
             model.addAttribute("error", "El coche no Existe");
+        } else {
             coche = cocheRepository.findById(id).get();
         }
 

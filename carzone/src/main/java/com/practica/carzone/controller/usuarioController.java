@@ -88,6 +88,7 @@ public class usuarioController {
 
         if (!usuarioRepository.existsById(id)) {
             model.addAttribute("error", "el usuario no Existe");
+        } else {
             usuario = usuarioRepository.findById(id).get();
         }
         

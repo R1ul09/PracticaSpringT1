@@ -75,9 +75,11 @@ public class concesionarioController {
 
         Concesionario concesionario = new Concesionario();
 
-        if (!concesionarioRepository.existsById(id))
+        if (!concesionarioRepository.existsById(id)) {
             model.addAttribute("error", "El concesionario no Existe");
+        } else {
             concesionario = concesionarioRepository.findById(id).get();
+        }
 
         model.addAttribute("concesionario", concesionario);
 

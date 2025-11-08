@@ -11,6 +11,7 @@
     <div class="container mt-4">
         <h1>Editar Usuario</h1>
         <form th:action="@{/usuarios/modificar}" th:object="${usuario}" method="post">
+            
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" th:field="*{nombre}" id="nombre" class="form-control" placeholder="Nombre" required>
@@ -35,10 +36,14 @@
                 <label for="direccion" class="form-label">Dirección</label>
                 <input type="text" th:field="*{direccion}" id="direccion" class="form-control" placeholder="C/ Falsa 123" required>
             </div>
+            
             <div class="mb-3">
                 <label for="rol" class="form-label">Rol</label>
-                <select th:field="*{rol}" id="rol" class="form-control" required>
-                    <option th:each="rol : ${roles}" th:value="${rol.id}" th:text="${rol.nombreRol}"></option>
+                <select th:field="*{rol.id}" id="rol" class="form-control" required>
+                    <option th:each="rol : ${roles}" 
+                            th:value="${rol.id}" 
+                            th:text="${rol.nombreRol}">
+                    </option>
                 </select>
             </div>
 

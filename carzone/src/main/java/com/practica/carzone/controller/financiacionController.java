@@ -88,6 +88,7 @@ public class financiacionController {
 
         if (!financiacionRepository.existsById(id)) {
             model.addAttribute("error", "La financiacion no Existe");
+        } else {
             financiacion = financiacionRepository.findById(id).get();
         }
 

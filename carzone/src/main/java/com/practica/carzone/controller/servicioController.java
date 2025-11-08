@@ -75,10 +75,12 @@ public class servicioController {
 
         Servicio servicio = new Servicio();
 
-        if (!servicioRepository.existsById(id))
+        if (!servicioRepository.existsById(id)) {
             model.addAttribute("error", "El servicio no Existe");
+        } else {
             servicio = servicioRepository.findById(id).get();
-
+        }
+            
         model.addAttribute("servicio", servicio);
 
         return "secundarias/servicio/editar";
