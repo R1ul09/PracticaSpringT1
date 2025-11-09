@@ -20,7 +20,11 @@
             </div>
             <div th:if="${error}" class="alert alert-danger alert-dismissible fade show" role="alert">
                 <span th:text="${error}"></span>
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+            </div>
+            <div th:if="${warning}" class="alert alert-warning" role="alert">
+                <span th:text="${warning}"></span>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
             </div>
         </div>
 
@@ -38,15 +42,16 @@
                     <th>Precio</th>
                     <th>Eliminar</th>
                     <th>Modificar</th>
+                    <th>Desasociar</th>
+                    <th>Asociar</th>
                 </tr>
             </thead>
 
             <tbody>
                 <tr th:each="coche : ${coches}">
-                    <td>
-                        <a th:href="@{/coches/ver/{id}(id=${coche.id})}" th:text="${coche.modelo}">Modelo Coche</a>
-                    </td>
-                    <td th:text="${coche.marca.nombreMarca}"></td>
+                    <td th:text="${coche.modelo}"></td>
+                    <td th:if="${coche.marca != null}" th:text="${coche.marca.nombreMarca}"></td>
+                    <td th:if="${coche.marca == null}">Sin marca</td>
                     <td th:text="${coche.anio}"></td>
                     <td th:text="${coche.color}"></td>
                     <td th:text="${coche.tipoCombustible}"></td>
@@ -61,6 +66,18 @@
                     <td>
                         <a th:href="@{/coches/editar/{id}(id=${coche.id})}" class="btn btn-secondary btn-sm">
                             Modificar
+                        </a>
+                    </td>
+
+                    <td>
+                        <a th:href="@{/coches/desasociar/{id}(id=${coche.id})}" class="btn btn-warning btn-sm">
+                            Desasociar
+                        </a>
+                    </td>
+
+                    <td>
+                        <a th:href="@{/coches/asociar/{id}(id=${coche.id})}" class="btn btn-info btn-sm">
+                            Asociar
                         </a>
                     </td>
                 </tr>

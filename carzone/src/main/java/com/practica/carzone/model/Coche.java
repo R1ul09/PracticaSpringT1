@@ -32,7 +32,7 @@ public class Coche {
     
     // Relacion con marca
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "marca_id", nullable = false)
+    @JoinColumn(name = "marca_id", nullable = true)
     private Marca marca;
 
     // RELACIÓN MANY-TO-MANY CON COMPARATIVA (Lado poseedor de la tabla de unión)

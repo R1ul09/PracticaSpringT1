@@ -39,6 +39,8 @@
                 <input type="number" step="0.01" th:field="*{precio}" id="precio" class="form-control" placeholder="Ej: 35000.50" required>
             </div>
 
+            <input type="hidden" name="redirectTarget" th:value="${redirectTarget}">
+
             <input type="hidden" th:field="*{id}">
             <button type="submit" class="btn btn-success">Guardar Cambios</button>
             <a th:href="@{/coches}" class="btn btn-secondary">Cancelar</a>
