@@ -26,6 +26,8 @@
 
         <h1>Lista de Marcas</h1>
         <a th:href="@{/marcas/nuevo}" class="btn btn-primary mb-3">Crear Marca</a>
+        <a th:href="@{/marcas/exportarCSV}" class="btn btn-success mb-3">Exportar CSV</a>
+        <a th:href="@{/marcas/exportarPDF}" class="btn btn-danger mb-3">Exportar PDF</a>
 
         <table class="table table-striped">
             <thead>
@@ -86,9 +88,6 @@
             </div>
         </div>
     </div>
-
-    <a th:href="@{/marcas/exportarPDF}" class="btn btn-success mb-3">Exportar CSV</a>
-    <a th:href="@{/coches/exportarCSV}" class="btn btn-danger mb-3">Exportar PDF</a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
