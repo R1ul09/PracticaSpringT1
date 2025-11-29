@@ -21,7 +21,7 @@ public interface MarcaRepository extends JpaRepository<Marca, Long> {
     @Query(value = "SELECT m.nombreMarca FROM Marca m")
     List<String> mostrarMarcas();
 
-    @Query(value = "SELECT m.nombreMarca FROM Marca m WHERE LOWER(m.nombreMarca) LIKE LOWER(CONCAT('%', :nombreParam, '%'))")
-    List<String> mostrarMarcasCaseSensitive(@Param("nombreParam") String nombreMarca);
+    @Query(value = "SELECT m FROM Marca m WHERE LOWER(m.nombreMarca) LIKE LOWER(CONCAT('%', :nombreParam, '%'))")
+    List<Marca> mostrarMarcasCaseSensitive(@Param("nombreParam") String nombreMarca);
 
 }

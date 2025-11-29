@@ -221,6 +221,95 @@ public class cocheController {
 
         return "redirect:/coches";
     }
-    
+
+    @GetMapping("/busquedaAvanzada")
+    public String busquedaAvanzada(
+        @RequestParam(value = "color", required = false) String color,
+        @RequestParam(value = "anio", required = false) String anioStr,
+        Model model) {
+        
+        List<Coche> listaCoches = List.of();
+        
+        // Convertir el año a Year para la consulta si está presente
+        if (color != null && !color.isEmpty() && anioStr != null && !anioStr.isEmpty()) {
+            try {
+                java.time.Year anio = java.time.Year.parse(anioStr);
+                
+                // 1. Ejecución del método de búsqueda avanzada del Repository
+                listaCoches = cocheRepository.findByColorAndAnioLessThan(color, anio);
+                
+                logger.info("Búsqueda avanzada de coches ejecutada: Color={}, Año < {}", color, anioStr);
+
+                if (listaCoches.isEmpty()) {
+                    model.addAttribute("warning", "No se encontraron coches con el color " + color + " y año anterior a " + anioStr);
+                }
+            } catch (Exception e) {
+                model.addAttribute("error", "Ocurrió un error inesperado al buscar.");
+                logger.error("Error en la búsqueda avanzada de coches.", e);
+            }
+        }
+
+        model.addAttribute("colorCoche", color);
+        model.addAttribute("anioLimite", anioStr);
+        model.addAttribute("listaCoches", listaCoches);
+
+        // Ejecución de la consulta JPQL con JOIN (Coches caros de Alemania)
+        // Usamos datos fijos para demostrar la funcionalidad JPQL
+        int precioMinimo = 20000;
+        String paisOrigen = "Alemania";
+        
+        List<Coche> cochesAlemanesCaros = cocheRepository.cochesMayorde20000ydeAlemania(precioMinimo, paisOrigen);
+        
+        model.addAttribute("precioMinimo", precioMinimo);
+        model.addAttribute("paisOrigenFiltro", paisOrigen);
+        model.addAttribute("cochesAlemanesCaros", cochesAlemanesCaros);
+
+        return "principales/coche/busquedaAvanzada";
+    }
+
+    @GetMapping("/estadisticas")
+    public String mostrarEstadisticas(Model model) {
+        
+        // Coche más caro (findTop1ByOrderByPrecioDesc)
+        Coche cocheTopPrecio = cocheRepository.findTop1ByOrderByPrecioDesc();
+        
+        // Conteo por Modelo (countByModelo)
+        String modeloEjemplo = "Corolla";
+        int countModelo = cocheRepository.countByModelo(modeloEjemplo);
+
+        model.addAttribute("cocheTopPrecio", cocheTopPrecio);
+        model.addAttribute("modeloEjemplo", modeloEjemplo);
+        model.addAttribute("countModelo", countModelo);
+        
+        logger.info("Estadísticas de coches cargadas. Coche más caro ID: {}", 
+                    cocheTopPrecio != null ? cocheTopPrecio.getId() : "N/A");
+
+        return "principales/coche/estadisticas";
+    }
+
+    @GetMapping("/borrarPorAnio")
+    public String borrarPorAnio(@RequestParam(value = "anio", required = false) String anioStr, RedirectAttributes redAttrib) {
+        
+        if (anioStr == null || anioStr.isEmpty()) {
+            redAttrib.addFlashAttribute("error", "Debe proporcionar un año");
+            return "redirect:/coches";
+        }
+
+        try {
+            java.time.Year anio = java.time.Year.parse(anioStr);
+            
+            // Ejecución del método @Transactional
+            cocheRepository.deleteByAnioGreaterThan(anio); 
+            
+            redAttrib.addFlashAttribute("success", "Borrado transaccional ejecutado: Se eliminaron los coches con año superior a " + anioStr);
+            logger.warn("SE HA EJECUTADO EL BORRADO TRANSACCIONAL DE COCHES CON AÑO > {}", anioStr);
+            
+        } catch (Exception e) {
+            redAttrib.addFlashAttribute("error", "Error al ejecutar el borrado transaccional: " + e.getMessage());
+            logger.error("Error al ejecutar deleteByAnioGreaterThan", e);
+        }
+
+        return "redirect:/coches";
+    }
 
 }

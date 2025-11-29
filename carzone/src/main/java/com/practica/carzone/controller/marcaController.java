@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.lowagie.text.Document;
 import com.lowagie.text.FontFactory;
@@ -126,6 +127,58 @@ public class marcaController {
         model.addAttribute("marca", marca);
 
         return "principales/marca/detalle";
+    }
+
+    @GetMapping("/busquedaAvanzada")
+    public String busquedaAvanzada(
+        @RequestParam(value = "nombre", required = false) String nombreMarca,
+        @RequestParam(value = "pais", required = false) String paisOrigen, Model model) {
+            
+            List<Marca> listaMarcas = List.of();
+
+            if (nombreMarca != null && !nombreMarca.isEmpty() && paisOrigen != null && !paisOrigen.isEmpty()) {
+                try {
+                    listaMarcas = marcaRepository.findByNombreMarcaAndPaisOrigen(nombreMarca, paisOrigen);
+                    logger.info("Búsqueda avanzada ejecutada por nombre: {} y país: {}", nombreMarca, paisOrigen);
+
+                    if (listaMarcas.isEmpty()) {
+                        model.addAttribute("error", "No se encontraron marcas con esos requisitos");
+                    }
+                } catch (Exception e) {
+                    model.addAttribute("error", "ocurrio un error");
+                    logger.error("Error en la busqueda avanzada", e.getMessage());
+                }
+            }
+
+            model.addAttribute("nombreMarca", nombreMarca);
+            model.addAttribute("paisOrigen", paisOrigen);
+            model.addAttribute("listaMarcas", listaMarcas);
+
+            return "principales/marca/busquedaAvanzada";
+        }
+
+    @GetMapping("/estadisticas")
+    public String mostrarEstadisticas(Model model) {
+        
+        // contar marcas por un pais (Usando countByPaisOrigen)
+        String paisEjemplo = "Alemania";
+        int countAlemania = marcaRepository.countByPaisOrigen(paisEjemplo);
+
+        // encontrar el Top 1 (Usando findTop1ByNombreMarcaOrderByPaisOrigenDesc)
+        String nombreEjemplo = "Toyota";
+        Marca topMarca = marcaRepository.findTop1ByNombreMarcaOrderByPaisOrigenDesc(nombreEjemplo);
+
+        List<String> nombres = marcaRepository.mostrarMarcas();
+
+        model.addAttribute("paisEjemplo", paisEjemplo);
+        model.addAttribute("countAlemania", countAlemania);
+        model.addAttribute("nombreEjemplo", nombreEjemplo);
+        model.addAttribute("topMarca", topMarca);
+        model.addAttribute("nombresMarcas", nombres);
+        
+        logger.info("Estadísticas cargadas: {} marcas de {}", countAlemania, paisEjemplo);
+
+        return "principales/marca/estadisticas";
     }
     
     @GetMapping("/exportarCSV")

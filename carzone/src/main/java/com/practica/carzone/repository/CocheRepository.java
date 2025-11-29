@@ -26,5 +26,8 @@ public interface CocheRepository extends JpaRepository<Coche, Long> {
     @Query(value = "SELECT c FROM Coche c " + "JOIN c.marca m WHERE c.precio >= :precio AND m.paisOrigen = :paisOrigen")
     public List<Coche> cochesMayorde20000ydeAlemania(@Param("precio") int precio, @Param("paisOrigen") String paisOrigen);
 
-
+    public Coche findTop1ByOrderByPrecioDesc();
+    
+    // Contar coches por modelo
+    public int countByModelo(String modelo);
 }
