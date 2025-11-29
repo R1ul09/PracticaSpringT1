@@ -80,14 +80,16 @@ El proyecto cumple con los siguientes requisitos funcionales y técnicos:
 
 ### 1. Lista de Marcas (Web)
 
-
+![Captura de pantalla de la tabla principal de Marcas en la aplicación web.](snapshots/lista_marcas.png)
 
 ### 2. Búsqueda Avanzada de Coches
 
-
+![Captura de pantalla del formulario de búsqueda avanzada para Coches, mostrando la búsqueda por color y año.](snapshots/busqueda_avanzada_coches.png)
 
 ### 3. Estadísticas de Coches
 
-
+![Captura de pantalla de la página de Estadísticas de Coches, mostrando el coche más caro (Top 1) y el formulario de borrado transaccional.] (snapshots/estadisticas_coches.png)
 
 ### 4. Inicio de Sesión (OAuth 2.0)
+
+![Captura de pantalla de la página de login de Spring Security, mostrando el botón "Login with Google".] (snapshots/login_oauth.png)
