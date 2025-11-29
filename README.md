@@ -80,16 +80,18 @@ El proyecto cumple con los siguientes requisitos funcionales y técnicos:
 
 ### 1. Lista de Marcas (Web)
 
-(snapshots/lista_marcas.png)
+<p align="center">
+  <img src="screenshots/lista_marcas.png" width="80%">
+</p>
 
 ### 2. Búsqueda Avanzada de Coches
 
-(snapshots/busqueda_avanzada_coches.png)
+<p align="center">
+  <img src="screenshots/busqueda_avanzada_coches.png" width="80%">
+</p>
 
 ### 3. Estadísticas de Coches
 
-(snapshots/estadisticas_coches.png)
-
-### 4. Inicio de Sesión (OAuth 2.0)
-
-(snapshots/login_oauth.png)
+<p align="center">
+  <img src="screenshots/estadisticas_coches.png" width="80%">
+</p>
