@@ -81,17 +81,17 @@ El proyecto cumple con los siguientes requisitos funcionales y técnicos:
 ### 1. Lista de Marcas (Web)
 
 <p align="center">
-  <img src="carzone/screenshots/lista_marcas.png" width="80%">
+  <img src="carzone/snapshots/lista_marcas.png" width="80%">
 </p>
 
 ### 2. Búsqueda Avanzada de Coches
 
 <p align="center">
-  <img src="carzone/screenshots/busqueda_avanzada_coches.png" width="80%">
+  <img src="carzone/snapshots/busqueda_avanzada_coches.png" width="80%">
 </p>
 
 ### 3. Estadísticas de Coches
 
 <p align="center">
-  <img src="carzone/screenshots/estadisticas_coches.png" width="80%">
+  <img src="carzone/snapshots/estadisticas_coches.png" width="80%">
 </p>
