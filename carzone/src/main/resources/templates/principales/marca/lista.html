@@ -34,8 +34,12 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Nombre</th>
-                    <th>País Origen</th>
+                    <th>
+                        <a th:href="@{/marcas(size=${marcas.size}, page=${marcas.number}, sort='nombreMarca', direction=${marcas.sort.getOrderFor('nombreMarca')?.direction == 'ASC' ? 'DESC' : 'ASC'})}">Nombre</a>
+                    </th>
+                    <th>
+                        <a th:href="@{/marcas(size=${marcas.size}, page=${marcas.number}, sort='paisOrigen', direction=${marcas.sort.getOrderFor('paisOrigen')?.direction == 'ASC' ? 'DESC' : 'ASC'})}">País Origen</a>
+                    </th>
                     <th>Fundación</th>
                     <th>Sede Central</th>
                     <th>Modelos Activos</th>
@@ -71,8 +75,42 @@
                 </tr>
             </tbody>
         </table>
-    </div>
 
+        <nav aria-label="Navegación de páginas" th:if="${marcas.totalPages > 0}"
+            th:with="currentSort=${marcas.sort.isSorted() ? marcas.sort.get().toList().get(0).property + ',' + marcas.sort.get().toList().get(0).direction : 'nombreMarca,asc'}">
+            <ul class="pagination justify-content-center">
+                
+                <li class="page-item" th:classappend="${marcas.hasPrevious() ? '' : 'disabled'}">
+                    <a th:href="@{/marcas(
+                            page=${marcas.number - 1}, 
+                            size=${marcas.size}, 
+                            sort=${currentSort} 
+                        )}" 
+                        class="page-link">Anterior</a>
+                </li>
+                
+                <li class="page-item" th:each="i : ${#numbers.sequence(0, marcas.totalPages - 1)}" 
+                    th:classappend="${i == marcas.number ? 'active' : ''}">
+                    <a th:href="@{/marcas(
+                            page=${i}, 
+                            size=${marcas.size}, 
+                            sort=${currentSort} 
+                        )}" 
+                        class="page-link" th:text="${i + 1}"></a>
+                </li>
+
+                <li class="page-item" th:classappend="${marcas.hasNext() ? '' : 'disabled'}">
+                    <a th:href="@{/marcas(
+                            page=${marcas.number + 1}, 
+                            size=${marcas.size}, 
+                            sort=${currentSort} 
+                        )}" 
+                        class="page-link">Siguiente</a>
+                </li>
+            </ul>
+        </nav>
+    </div> 
+    
     <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">

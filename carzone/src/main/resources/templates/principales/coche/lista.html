@@ -36,7 +36,9 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Modelo</th>
+                    <th>
+                        <a th:href="@{/coches(size=${coches.size}, page=${coches.number}, sort='modelo', direction=${coches.sort.getOrderFor('modelo')?.direction == 'ASC' ? 'DESC' : 'ASC'})}">Modelo</a>
+                    </th>
                     <th>Marca</th>
                     <th>Año</th>
                     <th>Color</th>
@@ -85,6 +87,40 @@
                 </tr>
             </tbody>
         </table>
+
+        <nav aria-label="Navegación de páginas" th:if="${coches.totalPages > 0}"
+            th:with="currentSort=${coches.sort.isSorted() ? coches.sort.get().toList().get(0).property + ',' + coches.sort.get().toList().get(0).direction : 'modelo,asc'}">
+            <ul class="pagination justify-content-center">
+                
+                <li class="page-item" th:classappend="${coches.hasPrevious() ? '' : 'disabled'}">
+                    <a th:href="@{/coches(
+                            page=${coches.number - 1}, 
+                            size=${coches.size}, 
+                            sort=${currentSort} 
+                        )}" 
+                        class="page-link">Anterior</a>
+                </li>
+                
+                <li class="page-item" th:each="i : ${#numbers.sequence(0, coches.totalPages - 1)}" 
+                    th:classappend="${i == coches.number ? 'active' : ''}">
+                    <a th:href="@{/coches(
+                            page=${i}, 
+                            size=${coches.size}, 
+                            sort=${currentSort} 
+                        )}" 
+                        class="page-link" th:text="${i + 1}"></a>
+                </li>
+
+                <li class="page-item" th:classappend="${coches.hasNext() ? '' : 'disabled'}">
+                    <a th:href="@{/coches(
+                            page=${coches.number + 1}, 
+                            size=${coches.size}, 
+                            sort=${currentSort} 
+                        )}" 
+                        class="page-link">Siguiente</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 
     <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">

@@ -9,6 +9,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 
 import com.practica.carzone.model.Coche;
 import com.practica.carzone.model.Marca;
@@ -37,10 +41,13 @@ public class cocheController {
     private MarcaRepository marcaRepository;
 
     @GetMapping
-    public String listaCoches(Model model) {
-        List<Coche> listaCoches = cocheRepository.findAll();
+    public String listaCoches(Model model, @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.ASC) Pageable pageable) {
+        
+        Page<Coche> cochesPage = cocheRepository.findAll(pageable);
 
-        model.addAttribute("coches", listaCoches);
+        model.addAttribute("coches", cochesPage);
+
+        model.addAttribute("pageable", pageable);
 
         return "principales/coche/lista";
     }

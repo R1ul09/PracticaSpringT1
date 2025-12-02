@@ -7,6 +7,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,6 +17,9 @@ import com.lowagie.text.FontFactory;
 import com.lowagie.text.PageSize;
 import com.lowagie.text.Paragraph;
 import com.lowagie.text.Phrase;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import com.lowagie.text.pdf.PdfPCell;
 import com.lowagie.text.pdf.PdfPTable;
 import com.lowagie.text.pdf.PdfWriter;
@@ -42,16 +46,33 @@ public class marcaController {
     @Autowired
     private MarcaRepository marcaRepository;
 
+    
+    /**
+     * Obtiene y muestra el listado paginado de marcas.
+     *
+     * @param model modelo para pasar atributos a la vista
+     * @param pageable configuración de paginación con tamaño de página 5 y ordenado por id ascendente
+     * @return vista del listado de marcas con la información paginada
+     */
     @GetMapping
-    public String listaMarcas(Model model) {
+    public String listaMarcas(Model model, @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.ASC) Pageable pageable) {
 
-        List<Marca> listaMarcas = marcaRepository.findAll();
+        Page<Marca> marcasPage = marcaRepository.findAll(pageable);
 
-        model.addAttribute("marcas", listaMarcas);
+        model.addAttribute("marcas", marcasPage);
+
+        model.addAttribute("pageable", pageable);
         
         return "principales/marca/lista";
     }
 
+    /**
+     * Elimina una marca del repositorio por su identificador.
+     *
+     * @param id identificador único de la marca a eliminar
+     * @param redAttrib atributos para redirigir con mensajes flash
+     * @return redirección al listado de marcas
+     */
     @GetMapping("/eliminar/{id}")
     public String removeMarca(@PathVariable Long id, RedirectAttributes redAttrib) {
     
@@ -66,6 +87,12 @@ public class marcaController {
         return "redirect:/marcas";
     }
 
+    /**
+     * Prepara el formulario para crear una nueva marca.
+     *
+     * @param model modelo para pasar una instancia vacía de Marca a la vista
+     * @return vista del formulario de creación de nueva marca
+     */
     @GetMapping("/nuevo")
     public String newMarca(Model model) {
 
@@ -76,6 +103,12 @@ public class marcaController {
         return "principales/marca/nuevo";
     }
 
+    /**
+     * Crea y persiste una nueva marca en el repositorio.
+     *
+     * @param marca objeto Marca con los datos a guardar
+     * @return redirección al listado de marcas
+     */
     @PostMapping("/crear")
     public String createMarca(@ModelAttribute("marca") Marca marca) {
         
@@ -86,6 +119,13 @@ public class marcaController {
         return "redirect:/marcas";
     }
     
+    /**
+     * Prepara el formulario de edición para una marca existente.
+     *
+     * @param id identificador único de la marca a editar
+     * @param model modelo para pasar la marca a la vista
+     * @return vista del formulario de edición de marca
+     */
     @GetMapping("/editar/{id}")
     public String editMarca(@PathVariable Long id, Model model) {
 
@@ -102,6 +142,13 @@ public class marcaController {
         return "principales/marca/editar";
     }
 
+    /**
+     * Modifica los datos de una marca existente en el repositorio.
+     *
+     * @param marca objeto Marca con los datos actualizados
+     * @param model modelo para pasar mensajes de error a la vista si es necesario
+     * @return redirección al listado de marcas
+     */
     @PostMapping("/modificar")
     public String modifyMarca(@ModelAttribute("marca") Marca marca, Model model) {
 
@@ -114,6 +161,13 @@ public class marcaController {
         return "redirect:/marcas";
     }
 
+    /**
+     * Obtiene y muestra los detalles de una marca específica.
+     *
+     * @param id identificador único de la marca a visualizar
+     * @param model modelo para pasar la marca a la vista
+     * @return vista de detalles de la marca
+     */
     @GetMapping("/ver/{id}")
     public String VerMarca(@PathVariable Long id, Model model) {
 
@@ -129,6 +183,14 @@ public class marcaController {
         return "principales/marca/detalle";
     }
 
+    /**
+     * Realiza una búsqueda avanzada de marcas filtradas por nombre y país de origen.
+     *
+     * @param nombreMarca nombre de la marca a buscar (parámetro opcional)
+     * @param paisOrigen país de origen de la marca a buscar (parámetro opcional)
+     * @param model modelo para pasar los resultados y parámetros de búsqueda a la vista
+     * @return vista de búsqueda avanzada con los resultados encontrados
+     */
     @GetMapping("/busquedaAvanzada")
     public String busquedaAvanzada(
         @RequestParam(value = "nombre", required = false) String nombreMarca,
@@ -157,6 +219,13 @@ public class marcaController {
             return "principales/marca/busquedaAvanzada";
         }
 
+    /**
+     * Obtiene y muestra estadísticas sobre las marcas, incluyendo conteos por país
+     * y marcas destacadas.
+     *
+     * @param model modelo para pasar las estadísticas a la vista
+     * @return vista de estadísticas con información agregada de marcas
+     */
     @GetMapping("/estadisticas")
     public String mostrarEstadisticas(Model model) {
         
@@ -181,6 +250,12 @@ public class marcaController {
         return "principales/marca/estadisticas";
     }
     
+    /**
+     * Exporta el listado completo de marcas en formato CSV.
+     * El archivo se descarga con el nombre "marcas_listado.csv".
+     *
+     * @param response respuesta HTTP utilizada para configurar la descarga del archivo
+     */
     @GetMapping("/exportarCSV")
     public void exportCSV(HttpServletResponse response) {
         response.setContentType("text/csv");
@@ -204,6 +279,13 @@ public class marcaController {
         }
     }
 
+    /**
+     * Exporta el listado completo de marcas en formato PDF.
+     * Genera un documento con una tabla conteniendo todos los datos de las marcas.
+     * El archivo se descarga con el nombre "marcas_listado.pdf".
+     *
+     * @param response respuesta HTTP utilizada para configurar la descarga del archivo PDF
+     */
     @GetMapping("/exportarPDF")
     public void exportPDF(HttpServletResponse response) {
 
