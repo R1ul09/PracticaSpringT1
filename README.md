@@ -75,19 +75,31 @@ El proyecto cumple con los siguientes requisitos funcionales y técnicos:
 
 ## 🖼️ Capturas de Pantalla de Vistas Principales
 
-### 1. Lista de Marcas (Web)
+### 1. Login
+
+<p align="center">
+  <img src="carzone/snapshots/login.png" width="80%">
+</p>
+
+### 2. Dashboard
+
+<p align="center">
+  <img src="carzone/snapshots/dashboard.png" width="80%">
+</p>
+
+### 3. Lista de Marcas (Web)
 
 <p align="center">
   <img src="carzone/snapshots/lista_marcas.png" width="80%">
 </p>
 
-### 2. Búsqueda Avanzada de Coches
+### 4. Búsqueda Avanzada de Coches
 
 <p align="center">
   <img src="carzone/snapshots/busqueda_avanzada_coches.png" width="80%">
 </p>
 
-### 3. Estadísticas de Coches
+### 5. Estadísticas de Coches
 
 <p align="center">
   <img src="carzone/snapshots/estadisticas_coches.png" width="80%">
