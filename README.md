@@ -18,14 +18,11 @@ La aplicación permite la administración completa de las entidades principales:
 
 ## 🏗️ Diagrama Entidad-Relación (ER)
 
-El diagrama ER refleja la estructura de la base de datos con la relación fundamental entre `Marca` y `Coche`.
+A continuación se muestra el diagrama ER actualizado del proyecto:
 
-
-
-**Relaciones Clave:**
-
-* **`Marca`** tiene una relación **Uno a Muchos (1:N)** con **`Coche`**.
-* **`Coche`** tiene una relación **Muchos a Uno (N:1)** con **`Marca`**.
+<p align="center">
+  <img src="carzone/snapshots/ER.png" width="80%">
+</p>
 
 ---
 
