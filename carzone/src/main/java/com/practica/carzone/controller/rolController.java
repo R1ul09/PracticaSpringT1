@@ -26,6 +26,11 @@ public class rolController {
     @Autowired
     private RolRepository rolRepository;
 
+    /**
+     * Obtiene y muestra el listado de todos los roles
+     * @param model modelo para pasar el listado de roles a la vista
+     * @return vista del listado de roles
+     */
     @GetMapping
     public String listaRoles(Model model) {
 
@@ -36,6 +41,12 @@ public class rolController {
         return "secundarias/rol/lista";
     }
 
+    /**
+     * Elimina un rol del repositorio por su identificador
+     * @param id identificador único del rol a eliminar
+     * @param redAttrib atributos para redirigir con mensajes flash
+     * @return redirección al listado de roles
+     */
     @GetMapping("/eliminar/{id}")
     public String removeRol(@PathVariable Long id, RedirectAttributes redAttrib) {
     
@@ -50,6 +61,11 @@ public class rolController {
         return "redirect:/roles";
     }
 
+    /**
+     * Manda al formulario para crear un nuevo rol
+     * @param model modelo para pasar la instancia de rol a la vista
+     * @return vista del formulario de creación de nuevo rol
+     */
     @GetMapping("/nuevo")
     public String newRol(Model model) {
 
@@ -60,6 +76,11 @@ public class rolController {
         return "secundarias/rol/nuevo";
     }
 
+    /**
+     * Crea una nueva rol en el repositorio
+     * @param rol objeto Rol con los datos a guardar
+     * @return redirección al listado de roles
+     */
     @PostMapping("/crear")
     public String createRol(@ModelAttribute("rol") Rol rol) {
         
@@ -70,6 +91,12 @@ public class rolController {
         return "redirect:/roles";
     }
     
+    /**
+     * Manda al formulario de edición para un rol existente
+     * @param id identificador único del rol a editar
+     * @param model modelo para pasar el rol a la vista
+     * @return vista del formulario de edición de rol
+     */
     @GetMapping("/editar/{id}")
     public String editRol(@PathVariable Long id, Model model) {
 
@@ -86,6 +113,12 @@ public class rolController {
         return "secundarias/rol/editar";
     }
 
+    /**
+     * Modifica los datos de un rol existente en el repositorio
+     * @param rol objeto Rol con los datos actualizados
+     * @param model modelo para pasar mensajes de error a la vista si es necesario
+     * @return redirección al listado de roles
+     */
     @PostMapping("/modificar")
     public String modifyRol(@ModelAttribute("rol") Rol rol, Model model) {
 

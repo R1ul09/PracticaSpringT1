@@ -15,6 +15,7 @@ public interface CocheRepository extends JpaRepository<Coche, Long> {
     
     // Ya esta por ahora
 
+    // Ponmos @Transactional porque es una operacion de escritura
     @Transactional
     public void deleteByAnioGreaterThan(Year Anio);
 

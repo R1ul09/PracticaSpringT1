@@ -1,20 +1,20 @@
-2025-12-05T09:56:02.421+01:00  INFO 19884 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Starting CarzoneApplication using Java 17.0.16 with PID 19884 (C:\PracticaSpringT1\carzone\target\classes started by usuario in C:\PracticaSpringT1\carzone)
-2025-12-05T09:56:02.430+01:00  INFO 19884 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : No active profile set, falling back to 1 default profile: "default"
-2025-12-05T09:56:02.477+01:00  INFO 19884 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-12-05T09:56:02.478+01:00  INFO 19884 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-12-05T09:56:03.077+01:00  INFO 19884 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-12-05T09:56:03.147+01:00  INFO 19884 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 9 JPA repository interfaces.
-2025-12-05T09:56:03.640+01:00  INFO 19884 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2025-12-05T09:56:03.653+01:00  INFO 19884 --- [carzone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-12-05T09:56:03.654+01:00  INFO 19884 --- [carzone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.13]
-2025-12-05T09:56:03.707+01:00  INFO 19884 --- [carzone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1229 ms
-2025-12-05T09:56:03.935+01:00  INFO 19884 --- [carzone] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-12-05T09:56:04.013+01:00  INFO 19884 --- [carzone] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.6.Final
-2025-12-05T09:56:04.534+01:00  INFO 19884 --- [carzone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-12-05T09:56:04.570+01:00  INFO 19884 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-12-05T09:56:04.899+01:00  INFO 19884 --- [carzone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@375f9437
-2025-12-05T09:56:04.901+01:00  INFO 19884 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-12-05T09:56:04.972+01:00  INFO 19884 --- [carzone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-12-06T17:04:06.662+01:00  INFO 5152 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Starting CarzoneApplication using Java 17.0.16 with PID 5152 (C:\PracticaSpringT1\carzone\target\classes started by usuario in C:\PracticaSpringT1\carzone)
+2025-12-06T17:04:06.672+01:00  INFO 5152 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-12-06T17:04:06.743+01:00  INFO 5152 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-06T17:04:06.744+01:00  INFO 5152 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-06T17:04:07.798+01:00  INFO 5152 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-06T17:04:07.908+01:00  INFO 5152 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 9 JPA repository interfaces.
+2025-12-06T17:04:08.723+01:00  INFO 5152 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-12-06T17:04:08.740+01:00  INFO 5152 --- [carzone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-06T17:04:08.740+01:00  INFO 5152 --- [carzone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.13]
+2025-12-06T17:04:08.825+01:00  INFO 5152 --- [carzone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2080 ms
+2025-12-06T17:04:09.132+01:00  INFO 5152 --- [carzone] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-06T17:04:09.246+01:00  INFO 5152 --- [carzone] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.6.Final
+2025-12-06T17:04:10.037+01:00  INFO 5152 --- [carzone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-06T17:04:10.094+01:00  INFO 5152 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-06T17:04:10.484+01:00  INFO 5152 --- [carzone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57c6e16b
+2025-12-06T17:04:10.487+01:00  INFO 5152 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-06T17:04:10.640+01:00  INFO 5152 --- [carzone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/coche]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
@@ -26,19 +26,578 @@
 	Pool: DatasourceConnectionProviderImpl
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-12-05T09:56:05.810+01:00  INFO 19884 --- [carzone] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-12-05T09:56:05.919+01:00  INFO 19884 --- [carzone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-12-05T09:56:05.998+01:00  INFO 19884 --- [carzone] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-12-05T09:56:07.053+01:00  WARN 19884 --- [carzone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-12-05T09:56:07.577+01:00  INFO 19884 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2025-12-05T09:56:07.583+01:00  INFO 19884 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Started CarzoneApplication in 5.576 seconds (process running for 6.127)
-2025-12-05T09:56:11.151+01:00  INFO 19884 --- [carzone] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-12-05T09:56:11.151+01:00  INFO 19884 --- [carzone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-12-05T09:56:11.153+01:00  INFO 19884 --- [carzone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-12-05T09:56:15.022+01:00  WARN 19884 --- [carzone] [http-nio-8080-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-5][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
-2025-12-05T09:56:27.735+01:00  WARN 19884 --- [carzone] [http-nio-8080-exec-7] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-7][secundarias/comparativa/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template secundarias/comparativa/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
-2025-12-05T09:56:30.885+01:00  WARN 19884 --- [carzone] [http-nio-8080-exec-9] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-9][secundarias/concesionario/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template secundarias/concesionario/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
-2025-12-05T09:56:34.204+01:00  WARN 19884 --- [carzone] [http-nio-8080-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-1][secundarias/financiacion/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template secundarias/financiacion/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
-2025-12-05T09:56:35.608+01:00  WARN 19884 --- [carzone] [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][secundarias/rol/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template secundarias/rol/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
-2025-12-05T09:56:39.643+01:00  WARN 19884 --- [carzone] [http-nio-8080-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-5][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
-2025-12-05T09:56:51.908+01:00  WARN 19884 --- [carzone] [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:04:12.056+01:00  INFO 5152 --- [carzone] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-06T17:04:12.220+01:00  INFO 5152 --- [carzone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-06T17:04:12.363+01:00  INFO 5152 --- [carzone] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-06T17:04:13.878+01:00  WARN 5152 --- [carzone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-06T17:04:14.882+01:00  INFO 5152 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-12-06T17:04:14.890+01:00  INFO 5152 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Started CarzoneApplication in 8.933 seconds (process running for 10.009)
+2025-12-06T17:04:20.843+01:00  INFO 5152 --- [carzone] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-06T17:04:20.843+01:00  INFO 5152 --- [carzone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-06T17:04:20.844+01:00  INFO 5152 --- [carzone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-06T17:04:59.521+01:00  WARN 5152 --- [carzone] [http-nio-8080-exec-4] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-4][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:15:29.395+01:00  INFO 23024 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Starting CarzoneApplication using Java 17.0.16 with PID 23024 (C:\PracticaSpringT1\carzone\target\classes started by usuario in C:\PracticaSpringT1\carzone)
+2025-12-06T17:15:29.401+01:00  INFO 23024 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-12-06T17:15:29.468+01:00  INFO 23024 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-06T17:15:29.468+01:00  INFO 23024 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-06T17:15:30.394+01:00  INFO 23024 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-06T17:15:30.494+01:00  INFO 23024 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 9 JPA repository interfaces.
+2025-12-06T17:15:31.343+01:00  INFO 23024 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-12-06T17:15:31.364+01:00  INFO 23024 --- [carzone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-06T17:15:31.364+01:00  INFO 23024 --- [carzone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.13]
+2025-12-06T17:15:31.441+01:00  INFO 23024 --- [carzone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1971 ms
+2025-12-06T17:15:31.720+01:00  INFO 23024 --- [carzone] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-06T17:15:31.808+01:00  INFO 23024 --- [carzone] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.6.Final
+2025-12-06T17:15:32.558+01:00  INFO 23024 --- [carzone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-06T17:15:32.609+01:00  INFO 23024 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-06T17:15:33.009+01:00  INFO 23024 --- [carzone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@11f05e5e
+2025-12-06T17:15:33.012+01:00  INFO 23024 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-06T17:15:33.140+01:00  INFO 23024 --- [carzone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/coche]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.40
+	Default catalog/schema: coche/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-06T17:15:34.438+01:00  INFO 23024 --- [carzone] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-06T17:15:34.603+01:00  INFO 23024 --- [carzone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-06T17:15:34.711+01:00  INFO 23024 --- [carzone] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-06T17:15:36.286+01:00  WARN 23024 --- [carzone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-06T17:15:37.399+01:00  INFO 23024 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-12-06T17:15:37.409+01:00  INFO 23024 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Started CarzoneApplication in 8.603 seconds (process running for 9.646)
+2025-12-06T17:15:41.504+01:00  INFO 23024 --- [carzone] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-06T17:15:41.505+01:00  INFO 23024 --- [carzone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-06T17:15:41.507+01:00  INFO 23024 --- [carzone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-12-06T17:17:13.502+01:00  WARN 23024 --- [carzone] [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][principales/coche/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/coche/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:17:16.553+01:00  WARN 23024 --- [carzone] [http-nio-8080-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-5][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:22:56.054+01:00  INFO 25152 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Starting CarzoneApplication using Java 17.0.16 with PID 25152 (C:\PracticaSpringT1\carzone\target\classes started by usuario in C:\PracticaSpringT1\carzone)
+2025-12-06T17:22:56.059+01:00  INFO 25152 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-12-06T17:22:56.122+01:00  INFO 25152 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-06T17:22:56.122+01:00  INFO 25152 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-06T17:22:57.071+01:00  INFO 25152 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-06T17:22:57.174+01:00  INFO 25152 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 9 JPA repository interfaces.
+2025-12-06T17:22:57.977+01:00  INFO 25152 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-12-06T17:22:58.002+01:00  INFO 25152 --- [carzone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-06T17:22:58.003+01:00  INFO 25152 --- [carzone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.13]
+2025-12-06T17:22:58.092+01:00  INFO 25152 --- [carzone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1968 ms
+2025-12-06T17:22:58.351+01:00  INFO 25152 --- [carzone] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-06T17:22:58.432+01:00  INFO 25152 --- [carzone] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.6.Final
+2025-12-06T17:22:59.176+01:00  INFO 25152 --- [carzone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-06T17:22:59.231+01:00  INFO 25152 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-06T17:22:59.615+01:00  INFO 25152 --- [carzone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d7df902
+2025-12-06T17:22:59.618+01:00  INFO 25152 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-06T17:22:59.729+01:00  INFO 25152 --- [carzone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/coche]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.40
+	Default catalog/schema: coche/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-06T17:23:01.028+01:00  INFO 25152 --- [carzone] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-06T17:23:01.183+01:00  INFO 25152 --- [carzone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-06T17:23:01.297+01:00  INFO 25152 --- [carzone] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-06T17:23:02.927+01:00  WARN 25152 --- [carzone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-06T17:23:03.880+01:00  INFO 25152 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-12-06T17:23:03.887+01:00  INFO 25152 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Started CarzoneApplication in 8.437 seconds (process running for 9.369)
+2025-12-06T17:23:16.916+01:00  INFO 25152 --- [carzone] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-06T17:23:16.917+01:00  INFO 25152 --- [carzone] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-06T17:23:16.919+01:00  INFO 25152 --- [carzone] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-06T17:23:43.408+01:00  WARN 25152 --- [carzone] [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:24:57.907+01:00  INFO 12240 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Starting CarzoneApplication using Java 17.0.16 with PID 12240 (C:\PracticaSpringT1\carzone\target\classes started by usuario in C:\PracticaSpringT1\carzone)
+2025-12-06T17:24:57.910+01:00  INFO 12240 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-12-06T17:24:57.955+01:00  INFO 12240 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-06T17:24:57.957+01:00  INFO 12240 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-06T17:24:58.497+01:00  INFO 12240 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-06T17:24:58.562+01:00  INFO 12240 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 9 JPA repository interfaces.
+2025-12-06T17:24:59.108+01:00  INFO 12240 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-12-06T17:24:59.124+01:00  INFO 12240 --- [carzone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-06T17:24:59.124+01:00  INFO 12240 --- [carzone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.13]
+2025-12-06T17:24:59.177+01:00  INFO 12240 --- [carzone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1220 ms
+2025-12-06T17:24:59.388+01:00  INFO 12240 --- [carzone] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-06T17:24:59.444+01:00  INFO 12240 --- [carzone] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.6.Final
+2025-12-06T17:24:59.879+01:00  INFO 12240 --- [carzone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-06T17:24:59.912+01:00  INFO 12240 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-06T17:25:00.167+01:00  INFO 12240 --- [carzone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e981e46
+2025-12-06T17:25:00.169+01:00  INFO 12240 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-06T17:25:00.228+01:00  INFO 12240 --- [carzone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/coche]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.40
+	Default catalog/schema: coche/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-06T17:25:00.939+01:00  INFO 12240 --- [carzone] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-06T17:25:01.025+01:00  INFO 12240 --- [carzone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-06T17:25:01.093+01:00  INFO 12240 --- [carzone] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-06T17:25:01.982+01:00  WARN 12240 --- [carzone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-06T17:25:02.838+01:00  INFO 12240 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-12-06T17:25:02.846+01:00  INFO 12240 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Started CarzoneApplication in 5.304 seconds (process running for 5.691)
+2025-12-06T17:25:06.062+01:00  INFO 12240 --- [carzone] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-06T17:25:06.062+01:00  INFO 12240 --- [carzone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-06T17:25:06.064+01:00  INFO 12240 --- [carzone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-06T17:25:23.110+01:00  WARN 12240 --- [carzone] [http-nio-8080-exec-6] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-6][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:25:26.331+01:00  WARN 12240 --- [carzone] [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:25:27.278+01:00  WARN 12240 --- [carzone] [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:25:28.641+01:00  WARN 12240 --- [carzone] [http-nio-8080-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-2][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:25:29.704+01:00  WARN 12240 --- [carzone] [http-nio-8080-exec-4] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-4][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:25:31.034+01:00  WARN 12240 --- [carzone] [http-nio-8080-exec-6] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-6][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:25:32.751+01:00  WARN 12240 --- [carzone] [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][principales/coche/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/coche/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:25:34.183+01:00  WARN 12240 --- [carzone] [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][principales/coche/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/coche/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:25:41.261+01:00  INFO 12240 --- [carzone] [http-nio-8080-exec-2] c.p.carzone.controller.cocheController   : Se ha desasociado correctamente la marca del coche con el id 22
+2025-12-06T17:25:41.278+01:00  WARN 12240 --- [carzone] [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][principales/coche/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/coche/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:25:53.295+01:00  WARN 12240 --- [carzone] [http-nio-8080-exec-7] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-7][principales/coche/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/coche/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:25:57.861+01:00  WARN 12240 --- [carzone] [http-nio-8080-exec-9] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-9][principales/coche/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/coche/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:27:09.386+01:00  INFO 21516 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Starting CarzoneApplication using Java 17.0.16 with PID 21516 (C:\PracticaSpringT1\carzone\target\classes started by usuario in C:\PracticaSpringT1\carzone)
+2025-12-06T17:27:09.388+01:00  INFO 21516 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-12-06T17:27:09.430+01:00  INFO 21516 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-06T17:27:09.431+01:00  INFO 21516 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-06T17:27:09.972+01:00  INFO 21516 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-06T17:27:10.045+01:00  INFO 21516 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 9 JPA repository interfaces.
+2025-12-06T17:27:10.507+01:00  INFO 21516 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-12-06T17:27:10.519+01:00  INFO 21516 --- [carzone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-06T17:27:10.520+01:00  INFO 21516 --- [carzone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.13]
+2025-12-06T17:27:10.575+01:00  INFO 21516 --- [carzone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1144 ms
+2025-12-06T17:27:10.795+01:00  INFO 21516 --- [carzone] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-06T17:27:10.850+01:00  INFO 21516 --- [carzone] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.6.Final
+2025-12-06T17:27:11.259+01:00  INFO 21516 --- [carzone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-06T17:27:11.294+01:00  INFO 21516 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-06T17:27:11.515+01:00  INFO 21516 --- [carzone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c1a75b2
+2025-12-06T17:27:11.518+01:00  INFO 21516 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-06T17:27:11.578+01:00  INFO 21516 --- [carzone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/coche]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.40
+	Default catalog/schema: coche/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-06T17:27:12.289+01:00  INFO 21516 --- [carzone] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-06T17:27:12.374+01:00  INFO 21516 --- [carzone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-06T17:27:12.444+01:00  INFO 21516 --- [carzone] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-06T17:27:13.441+01:00  WARN 21516 --- [carzone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-06T17:27:14.340+01:00  INFO 21516 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-12-06T17:27:14.348+01:00  INFO 21516 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Started CarzoneApplication in 5.312 seconds (process running for 5.834)
+2025-12-06T17:27:18.481+01:00  INFO 21516 --- [carzone] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-06T17:27:18.481+01:00  INFO 21516 --- [carzone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-06T17:27:18.483+01:00  INFO 21516 --- [carzone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-06T17:27:27.551+01:00  WARN 21516 --- [carzone] [http-nio-8080-exec-6] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-6][principales/coche/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/coche/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:27:29.694+01:00  WARN 21516 --- [carzone] [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][principales/coche/busquedaAvanzada] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/coche/busquedaAvanzada, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:27:33.727+01:00  WARN 21516 --- [carzone] [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:37:51.085+01:00  INFO 3388 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Starting CarzoneApplication using Java 17.0.16 with PID 3388 (C:\PracticaSpringT1\carzone\target\classes started by usuario in C:\PracticaSpringT1\carzone)
+2025-12-06T17:37:51.088+01:00  INFO 3388 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-12-06T17:37:51.131+01:00  INFO 3388 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-06T17:37:51.132+01:00  INFO 3388 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-06T17:37:51.699+01:00  INFO 3388 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-06T17:37:51.765+01:00  INFO 3388 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 9 JPA repository interfaces.
+2025-12-06T17:37:52.295+01:00  INFO 3388 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-12-06T17:37:52.310+01:00  INFO 3388 --- [carzone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-06T17:37:52.311+01:00  INFO 3388 --- [carzone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.13]
+2025-12-06T17:37:52.373+01:00  INFO 3388 --- [carzone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1241 ms
+2025-12-06T17:37:52.564+01:00  INFO 3388 --- [carzone] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-06T17:37:52.619+01:00  INFO 3388 --- [carzone] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.6.Final
+2025-12-06T17:37:53.063+01:00  INFO 3388 --- [carzone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-06T17:37:53.094+01:00  INFO 3388 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-06T17:37:53.321+01:00  INFO 3388 --- [carzone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40923f1a
+2025-12-06T17:37:53.322+01:00  INFO 3388 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-06T17:37:53.385+01:00  INFO 3388 --- [carzone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/coche]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.40
+	Default catalog/schema: coche/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-06T17:37:54.105+01:00  INFO 3388 --- [carzone] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-06T17:37:54.210+01:00  INFO 3388 --- [carzone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-06T17:37:54.284+01:00  INFO 3388 --- [carzone] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-06T17:37:55.255+01:00  WARN 3388 --- [carzone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-06T17:37:56.143+01:00  INFO 3388 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-12-06T17:37:56.151+01:00  INFO 3388 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Started CarzoneApplication in 5.441 seconds (process running for 5.975)
+2025-12-06T17:38:03.331+01:00  INFO 3388 --- [carzone] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-06T17:38:03.331+01:00  INFO 3388 --- [carzone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-06T17:38:03.332+01:00  INFO 3388 --- [carzone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-06T17:38:22.673+01:00 ERROR 3388 --- [carzone] [http-nio-8080-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-1] Exception processing template "secundarias/usuario/perfil": Error resolving template [secundarias/usuario/perfil], template might not exist or might not be accessible by any of the configured Template Resolvers
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [secundarias/usuario/perfil], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1305) ~[spring-webmvc-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1042) ~[spring-webmvc-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980) ~[spring-webmvc-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.0-RC3.jar:7.0.0-RC3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.13.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.0-RC3.jar:7.0.0-RC3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.13.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.13.jar:11.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:245) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:239) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:195) ~[spring-security-oauth2-client-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:118) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-12-06T17:38:22.684+01:00 ERROR 3388 --- [carzone] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [secundarias/usuario/perfil], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [secundarias/usuario/perfil], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1305) ~[spring-webmvc-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1042) ~[spring-webmvc-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980) ~[spring-webmvc-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.0-RC3.jar:7.0.0-RC3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.13.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.0-RC3.jar:7.0.0-RC3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.13.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.13.jar:11.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:245) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:239) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:195) ~[spring-security-oauth2-client-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:118) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.0-RC3.jar:7.0.0-RC3]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.13.jar:11.0.13]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-12-06T17:38:38.532+01:00  INFO 3388 --- [carzone] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-12-06T17:38:38.536+01:00  INFO 3388 --- [carzone] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-06T17:38:38.681+01:00  INFO 3388 --- [carzone] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2025-12-06T17:38:38.685+01:00  INFO 3388 --- [carzone] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-06T17:38:38.687+01:00  INFO 3388 --- [carzone] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-06T17:38:38.696+01:00  INFO 3388 --- [carzone] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-06T17:38:38.775+01:00  INFO 3388 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Starting CarzoneApplication using Java 17.0.16 with PID 3388 (C:\PracticaSpringT1\carzone\target\classes started by usuario in C:\PracticaSpringT1\carzone)
+2025-12-06T17:38:38.775+01:00  INFO 3388 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-12-06T17:38:40.090+01:00  INFO 18404 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Starting CarzoneApplication using Java 17.0.16 with PID 18404 (C:\PracticaSpringT1\carzone\target\classes started by usuario in C:\PracticaSpringT1\carzone)
+2025-12-06T17:38:40.095+01:00  INFO 18404 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-12-06T17:38:40.142+01:00  INFO 18404 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-06T17:38:40.143+01:00  INFO 18404 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-06T17:38:40.701+01:00  INFO 18404 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-06T17:38:40.772+01:00  INFO 18404 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 9 JPA repository interfaces.
+2025-12-06T17:38:41.326+01:00  INFO 18404 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-12-06T17:38:41.340+01:00  INFO 18404 --- [carzone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-06T17:38:41.340+01:00  INFO 18404 --- [carzone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.13]
+2025-12-06T17:38:41.393+01:00  INFO 18404 --- [carzone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1249 ms
+2025-12-06T17:38:41.622+01:00  INFO 18404 --- [carzone] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-06T17:38:41.679+01:00  INFO 18404 --- [carzone] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.6.Final
+2025-12-06T17:38:42.152+01:00  INFO 18404 --- [carzone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-06T17:38:42.190+01:00  INFO 18404 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-06T17:38:42.423+01:00  INFO 18404 --- [carzone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@720894bf
+2025-12-06T17:38:42.426+01:00  INFO 18404 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-06T17:38:42.483+01:00  INFO 18404 --- [carzone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/coche]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.40
+	Default catalog/schema: coche/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-06T17:38:43.206+01:00  INFO 18404 --- [carzone] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-06T17:38:43.304+01:00  INFO 18404 --- [carzone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-06T17:38:43.378+01:00  INFO 18404 --- [carzone] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-06T17:38:44.356+01:00  WARN 18404 --- [carzone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-06T17:38:45.215+01:00  INFO 18404 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-12-06T17:38:45.223+01:00  INFO 18404 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Started CarzoneApplication in 5.512 seconds (process running for 5.904)
+2025-12-06T17:38:48.009+01:00  INFO 18404 --- [carzone] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-06T17:38:48.010+01:00  INFO 18404 --- [carzone] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-06T17:38:48.011+01:00  INFO 18404 --- [carzone] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-06T17:39:10.396+01:00  WARN 18404 --- [carzone] [http-nio-8080-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-5][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:39:24.699+01:00  WARN 18404 --- [carzone] [http-nio-8080-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-2][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:48:43.488+01:00  INFO 1028 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Starting CarzoneApplication using Java 17.0.16 with PID 1028 (C:\PracticaSpringT1\carzone\target\classes started by usuario in C:\PracticaSpringT1\carzone)
+2025-12-06T17:48:43.492+01:00  INFO 1028 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-12-06T17:48:43.534+01:00  INFO 1028 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-06T17:48:43.534+01:00  INFO 1028 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-06T17:48:44.077+01:00  INFO 1028 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-06T17:48:44.138+01:00  INFO 1028 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 9 JPA repository interfaces.
+2025-12-06T17:48:44.658+01:00  INFO 1028 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-12-06T17:48:44.673+01:00  INFO 1028 --- [carzone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-06T17:48:44.674+01:00  INFO 1028 --- [carzone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.13]
+2025-12-06T17:48:44.734+01:00  INFO 1028 --- [carzone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1199 ms
+2025-12-06T17:48:44.941+01:00  INFO 1028 --- [carzone] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-06T17:48:45.003+01:00  INFO 1028 --- [carzone] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.6.Final
+2025-12-06T17:48:45.498+01:00  INFO 1028 --- [carzone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-06T17:48:45.533+01:00  INFO 1028 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-06T17:48:45.802+01:00  INFO 1028 --- [carzone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31b2c748
+2025-12-06T17:48:45.803+01:00  INFO 1028 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-06T17:48:45.875+01:00  INFO 1028 --- [carzone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/coche]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.40
+	Default catalog/schema: coche/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-06T17:48:46.616+01:00  INFO 1028 --- [carzone] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-06T17:48:46.727+01:00  INFO 1028 --- [carzone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-06T17:48:46.806+01:00  INFO 1028 --- [carzone] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-06T17:48:47.768+01:00  WARN 1028 --- [carzone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-06T17:48:48.751+01:00  INFO 1028 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-12-06T17:48:48.762+01:00  INFO 1028 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Started CarzoneApplication in 5.633 seconds (process running for 6.181)
+2025-12-06T17:48:51.732+01:00  INFO 1028 --- [carzone] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-06T17:48:51.733+01:00  INFO 1028 --- [carzone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-06T17:48:51.735+01:00  INFO 1028 --- [carzone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-12-06T17:49:05.455+01:00  WARN 1028 --- [carzone] [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T17:55:40.583+01:00  INFO 18300 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Starting CarzoneApplication using Java 17.0.16 with PID 18300 (C:\PracticaSpringT1\carzone\target\classes started by usuario in C:\PracticaSpringT1\carzone)
+2025-12-06T17:55:40.587+01:00  INFO 18300 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-12-06T17:55:40.635+01:00  INFO 18300 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-06T17:55:40.635+01:00  INFO 18300 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-06T17:55:41.217+01:00  INFO 18300 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-06T17:55:41.289+01:00  INFO 18300 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 9 JPA repository interfaces.
+2025-12-06T17:55:41.829+01:00  INFO 18300 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-12-06T17:55:41.843+01:00  INFO 18300 --- [carzone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-06T17:55:41.843+01:00  INFO 18300 --- [carzone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.13]
+2025-12-06T17:55:41.903+01:00  INFO 18300 --- [carzone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1267 ms
+2025-12-06T17:55:42.103+01:00  INFO 18300 --- [carzone] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-06T17:55:42.162+01:00  INFO 18300 --- [carzone] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.6.Final
+2025-12-06T17:55:42.642+01:00  INFO 18300 --- [carzone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-06T17:55:42.676+01:00  INFO 18300 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-06T17:55:42.920+01:00  INFO 18300 --- [carzone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5040e243
+2025-12-06T17:55:42.921+01:00  INFO 18300 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-06T17:55:42.984+01:00  INFO 18300 --- [carzone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/coche]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.40
+	Default catalog/schema: coche/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-06T17:55:43.748+01:00  INFO 18300 --- [carzone] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-06T17:55:43.841+01:00  INFO 18300 --- [carzone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-06T17:55:43.915+01:00  INFO 18300 --- [carzone] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-06T17:55:44.909+01:00  WARN 18300 --- [carzone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-06T17:55:45.868+01:00  INFO 18300 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-12-06T17:55:45.875+01:00  INFO 18300 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Started CarzoneApplication in 5.674 seconds (process running for 6.311)
+2025-12-06T17:55:51.550+01:00  INFO 18300 --- [carzone] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-06T17:55:51.551+01:00  INFO 18300 --- [carzone] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-06T17:55:51.553+01:00  INFO 18300 --- [carzone] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-12-06T18:00:39.083+01:00  WARN 18300 --- [carzone] [http-nio-8080-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-2][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T18:04:02.907+01:00  WARN 18300 --- [carzone] [http-nio-8080-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-5][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T18:04:03.766+01:00  WARN 18300 --- [carzone] [http-nio-8080-exec-7] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-7][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T18:04:05.235+01:00  WARN 18300 --- [carzone] [http-nio-8080-exec-9] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-9][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T18:04:16.953+01:00  WARN 18300 --- [carzone] [http-nio-8080-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-2][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T18:04:18.190+01:00  WARN 18300 --- [carzone] [http-nio-8080-exec-4] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-4][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T18:07:16.012+01:00  INFO 18300 --- [carzone] [http-nio-8080-exec-7] c.p.carzone.controller.marcaController   : Se ha borrado correctamente la marca con el id 1
+2025-12-06T18:07:16.031+01:00  WARN 18300 --- [carzone] [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T18:10:57.383+01:00  INFO 18300 --- [carzone] [http-nio-8080-exec-4] c.p.carzone.controller.marcaController   : Se ha creado la marca con el id 16
+2025-12-06T18:10:57.398+01:00  WARN 18300 --- [carzone] [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][principales/marca/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/marca/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T18:11:39.815+01:00  WARN 18300 --- [carzone] [http-nio-8080-exec-6] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-6][principales/coche/lista] Deprecated unwrapped fragment expression "fragments/menu :: menuSuperior" found in template principales/coche/lista, line 12, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/menu :: menuSuperior}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-12-06T18:21:12.914+01:00  INFO 13604 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Starting CarzoneApplication using Java 17.0.16 with PID 13604 (C:\PracticaSpringT1\carzone\target\classes started by usuario in C:\PracticaSpringT1\carzone)
+2025-12-06T18:21:12.918+01:00  INFO 13604 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-12-06T18:21:12.967+01:00  INFO 13604 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-06T18:21:12.968+01:00  INFO 13604 --- [carzone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-06T18:21:13.571+01:00  INFO 13604 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-06T18:21:13.635+01:00  INFO 13604 --- [carzone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 9 JPA repository interfaces.
+2025-12-06T18:21:14.274+01:00  INFO 13604 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-12-06T18:21:14.291+01:00  INFO 13604 --- [carzone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-06T18:21:14.292+01:00  INFO 13604 --- [carzone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.13]
+2025-12-06T18:21:14.358+01:00  INFO 13604 --- [carzone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1390 ms
+2025-12-06T18:21:14.556+01:00  INFO 13604 --- [carzone] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-06T18:21:14.614+01:00  INFO 13604 --- [carzone] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.6.Final
+2025-12-06T18:21:15.094+01:00  INFO 13604 --- [carzone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-06T18:21:15.127+01:00  INFO 13604 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-06T18:21:15.379+01:00  INFO 13604 --- [carzone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ade7d81
+2025-12-06T18:21:15.380+01:00  INFO 13604 --- [carzone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-06T18:21:15.438+01:00  INFO 13604 --- [carzone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/coche]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.40
+	Default catalog/schema: coche/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-06T18:21:16.194+01:00  INFO 13604 --- [carzone] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-06T18:21:16.293+01:00  INFO 13604 --- [carzone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-06T18:21:16.373+01:00  INFO 13604 --- [carzone] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-06T18:21:17.338+01:00  WARN 13604 --- [carzone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-06T18:21:18.223+01:00  INFO 13604 --- [carzone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-12-06T18:21:18.234+01:00  INFO 13604 --- [carzone] [restartedMain] c.practica.carzone.CarzoneApplication    : Started CarzoneApplication in 5.715 seconds (process running for 6.124)
+2025-12-06T18:21:25.885+01:00  INFO 13604 --- [carzone] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-06T18:21:25.885+01:00  INFO 13604 --- [carzone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-06T18:21:25.886+01:00  INFO 13604 --- [carzone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

@@ -38,12 +38,12 @@ public class Cita {
     @JoinColumn(name = "concesionario_id", nullable = false)
     private Concesionario concesionario;
     
-    // 💡 RELACIÓN MANY-TO-MANY CON SERVICIO (Lado poseedor de la tabla de unión)
+    // Relacion con servicio
     @ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
-        name = "cita_servicio", // Nombre de la tabla intermedia
-        joinColumns = @JoinColumn(name = "cita_id"), // Columna que referencia a ESTA entidad (Cita)
-        inverseJoinColumns = @JoinColumn(name = "servicio_id") // Columna que referencia a la OTRA entidad (Servicio)
+        name = "cita_servicio",
+        joinColumns = @JoinColumn(name = "cita_id"),
+        inverseJoinColumns = @JoinColumn(name = "servicio_id")
     )
     private List<Servicio> servicios = new ArrayList<>();
 }

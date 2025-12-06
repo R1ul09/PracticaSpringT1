@@ -48,8 +48,7 @@ public class marcaController {
 
     
     /**
-     * Obtiene y muestra el listado paginado de marcas.
-     *
+     * Obtiene y muestra el listado paginado de marcas
      * @param model modelo para pasar atributos a la vista
      * @param pageable configuración de paginación con tamaño de página 5 y ordenado por id ascendente
      * @return vista del listado de marcas con la información paginada
@@ -67,8 +66,7 @@ public class marcaController {
     }
 
     /**
-     * Elimina una marca del repositorio por su identificador.
-     *
+     * Elimina una marca del repositorio por su id
      * @param id identificador único de la marca a eliminar
      * @param redAttrib atributos para redirigir con mensajes flash
      * @return redirección al listado de marcas
@@ -88,8 +86,7 @@ public class marcaController {
     }
 
     /**
-     * Prepara el formulario para crear una nueva marca.
-     *
+     * Manda al formulario para crear una nueva marca
      * @param model modelo para pasar una instancia vacía de Marca a la vista
      * @return vista del formulario de creación de nueva marca
      */
@@ -104,8 +101,7 @@ public class marcaController {
     }
 
     /**
-     * Crea y persiste una nueva marca en el repositorio.
-     *
+     * Crea una nueva marca en bd
      * @param marca objeto Marca con los datos a guardar
      * @return redirección al listado de marcas
      */
@@ -120,8 +116,7 @@ public class marcaController {
     }
     
     /**
-     * Prepara el formulario de edición para una marca existente.
-     *
+     * manda al formulario de edición para una marca existente
      * @param id identificador único de la marca a editar
      * @param model modelo para pasar la marca a la vista
      * @return vista del formulario de edición de marca
@@ -143,8 +138,7 @@ public class marcaController {
     }
 
     /**
-     * Modifica los datos de una marca existente en el repositorio.
-     *
+     * Modifica los datos de una marca existente en el repositorio
      * @param marca objeto Marca con los datos actualizados
      * @param model modelo para pasar mensajes de error a la vista si es necesario
      * @return redirección al listado de marcas
@@ -162,8 +156,7 @@ public class marcaController {
     }
 
     /**
-     * Obtiene y muestra los detalles de una marca específica.
-     *
+     * Obtiene y muestra los detalles de una marca específica por su id
      * @param id identificador único de la marca a visualizar
      * @param model modelo para pasar la marca a la vista
      * @return vista de detalles de la marca
@@ -184,8 +177,7 @@ public class marcaController {
     }
 
     /**
-     * Realiza una búsqueda avanzada de marcas filtradas por nombre y país de origen.
-     *
+     * Realiza una búsqueda avanzada de marcas filtradas por nombre y país de origen
      * @param nombreMarca nombre de la marca a buscar (parámetro opcional)
      * @param paisOrigen país de origen de la marca a buscar (parámetro opcional)
      * @param model modelo para pasar los resultados y parámetros de búsqueda a la vista
@@ -196,6 +188,7 @@ public class marcaController {
         @RequestParam(value = "nombre", required = false) String nombreMarca,
         @RequestParam(value = "pais", required = false) String paisOrigen, Model model) {
             
+            // con .of() lo que hacemos es crear una lista vacía
             List<Marca> listaMarcas = List.of();
 
             if (nombreMarca != null && !nombreMarca.isEmpty() && paisOrigen != null && !paisOrigen.isEmpty()) {
@@ -221,8 +214,7 @@ public class marcaController {
 
     /**
      * Obtiene y muestra estadísticas sobre las marcas, incluyendo conteos por país
-     * y marcas destacadas.
-     *
+     * y marcas destacadas
      * @param model modelo para pasar las estadísticas a la vista
      * @return vista de estadísticas con información agregada de marcas
      */
@@ -251,9 +243,8 @@ public class marcaController {
     }
     
     /**
-     * Exporta el listado completo de marcas en formato CSV.
-     * El archivo se descarga con el nombre "marcas_listado.csv".
-     *
+     * Exporta el listado completo de marcas en formato CSV
+     * El archivo se descarga con el nombre "marcas_listado.csv"
      * @param response respuesta HTTP utilizada para configurar la descarga del archivo
      */
     @GetMapping("/exportarCSV")
@@ -273,6 +264,7 @@ public class marcaController {
                 + marca.getFechaFundacion() + "," + marca.getSedeCentral() + "," + marca.getNumModelosActivos());
             }
 
+            // con .flush() aseguramos que se escriban todos los datos antes de cerrar
             writer.flush();
         } catch (IOException e) {
             logger.error("Error al escribir el CSV: " + e.getMessage());
@@ -282,14 +274,13 @@ public class marcaController {
     /**
      * Exporta el listado completo de marcas en formato PDF.
      * Genera un documento con una tabla conteniendo todos los datos de las marcas.
-     * El archivo se descarga con el nombre "marcas_listado.pdf".
-     *
+     * El archivo se descarga con el nombre "marcas_listado.pdf"
      * @param response respuesta HTTP utilizada para configurar la descarga del archivo PDF
      */
     @GetMapping("/exportarPDF")
     public void exportPDF(HttpServletResponse response) {
 
-        // 2. Configurar la respuesta HTTP para PDF
+        // Configurar la respuesta HTTP para PDF
         response.setContentType("application/pdf");
         response.setHeader("Content-Disposition", "attachment; filename=\"marcas_listado.pdf\"");
 

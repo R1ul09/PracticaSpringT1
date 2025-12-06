@@ -36,6 +36,11 @@ public class citaController {
     @Autowired
     private ConcesionarioRepository concesionarioRepository;
 
+    /**
+     * Obtiene y muestra el listado de todas las citas
+     * @param model modelo para pasar el listado de citas a la vista
+     * @return vista del listado de citas
+     */
     @GetMapping
     public String listaCitas(Model model) {
 
@@ -46,6 +51,12 @@ public class citaController {
         return "secundarias/cita/lista";
     }
 
+    /**
+     * Elimina una cita del repositorio por su id
+     * @param id identificador único de la cita a eliminar
+     * @param redAttrib atributos para redirigir con mensajes flash
+     * @return redirección al listado de citas
+     */
     @GetMapping("/eliminar/{id}")
     public String removeCita(@PathVariable Long id, RedirectAttributes redAttrib) {
     
@@ -60,6 +71,11 @@ public class citaController {
         return "redirect:/citas";
     }
 
+    /**
+     * manda al formulario para crear una nueva cita cargando usuarios y concesionarios
+     * @param model modelo para pasar la instancia de cita y las listas de usuarios y concesionarios
+     * @return vista del formulario de creación de nueva cita
+     */
     @GetMapping("/nuevo")
     public String newCita(Model model) {
 
@@ -78,6 +94,11 @@ public class citaController {
         return "secundarias/cita/nuevo";
     }
 
+    /**
+     * Crea una nueva cita en bd
+     * @param cita objeto Cita con los datos a guardar
+     * @return redirección al listado de citas
+     */
     @PostMapping("/crear")
     public String createCita(@ModelAttribute("cita") Cita cita) {
         
@@ -88,6 +109,12 @@ public class citaController {
         return "redirect:/citas";
     }
     
+    /**
+     * manda al formulario de edición para una cita existente cargando usuarios y concesionarios
+     * @param id identificador único de la cita a editar
+     * @param model modelo para pasar la cita y las listas de usuarios y concesionarios
+     * @return vista del formulario de edición de cita
+     */
     @GetMapping("/editar/{id}")
     public String editCita(@PathVariable Long id, Model model) {
 
@@ -112,6 +139,12 @@ public class citaController {
         return "secundarias/cita/editar";
     }
 
+    /**
+     * Modifica los datos de una cita existente en el repositorio
+     * @param cita objeto Cita con los datos actualizados
+     * @param model modelo para pasar mensajes de error a la vista si es necesario
+     * @return redirección al listado de citas
+     */
     @PostMapping("/modificar")
     public String modifyCita(@ModelAttribute("cita") Cita cita, Model model) {
 

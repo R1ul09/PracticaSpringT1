@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Carzone</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="/dashboard">
+                <i class="fas fa-car"></i> Carzone
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle"></i> Mi Perfil
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li>
+                                <form action="/logout" method="POST" style="display: inline;">
+                                    <button type="submit" class="dropdown-item text-danger" style="border: none; background: none; cursor: pointer;">
+                                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="py-5">
+        <div class="container-lg">
+            <!-- Welcome Alert -->
+            <div class="alert alert-info border-0 shadow-sm mb-5 rounded-3">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-wave-hand me-3 fa-2x"></i>
+                    <div>
+                        <h2 class="mb-1">Bienvenido, <span th:text="${userName}">Usuario</span>!</h2>
+                        <p class="mb-0 text-muted">Gestiona tu inventario de coches desde un único lugar</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modules Section Title -->
+            <h4 class="mb-4 fw-bold">
+                <i class="fas fa-th-large me-2"></i> Módulos Disponibles
+            </h4>
+
+            <!-- Modules Grid -->
+            <div class="row g-4">
+                <!-- Marcas -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="card border-0 shadow-sm h-100 rounded-3">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-trademark text-primary fa-3x"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Marcas</h5>
+                            <p class="card-text text-muted small">Gestiona todas las marcas de coches</p>
+                            <a href="/marcas" class="btn btn-primary btn-sm mt-auto">Acceder</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coches -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="card border-0 shadow-sm h-100 rounded-3">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-car text-success fa-3x"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Coches</h5>
+                            <p class="card-text text-muted small">Visualiza el inventario de coches</p>
+                            <a href="/coches" class="btn btn-success btn-sm mt-auto">Acceder</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Citas -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="card border-0 shadow-sm h-100 rounded-3">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-calendar-alt text-warning fa-3x"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Citas</h5>
+                            <p class="card-text text-muted small">Gestiona citas con concesionarios</p>
+                            <a href="/citas" class="btn btn-warning btn-sm mt-auto">Acceder</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Usuarios -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="card border-0 shadow-sm h-100 rounded-3">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-users text-info fa-3x"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Usuarios</h5>
+                            <p class="card-text text-muted small">Administra usuarios del sistema</p>
+                            <a href="/usuarios" class="btn btn-info btn-sm mt-auto">Acceder</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicios -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="card border-0 shadow-sm h-100 rounded-3">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-tools text-danger fa-3x"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Servicios</h5>
+                            <p class="card-text text-muted small">Gestiona servicios disponibles</p>
+                            <a href="/servicios" class="btn btn-danger btn-sm mt-auto">Acceder</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concesionarios -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="card border-0 shadow-sm h-100 rounded-3">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-store text-success fa-3x"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Concesionarios</h5>
+                            <p class="card-text text-muted small">Visualiza concesionarios disponibles</p>
+                            <a href="/concesionarios" class="btn btn-success btn-sm mt-auto">Acceder</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financiaciones -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="card border-0 shadow-sm h-100 rounded-3">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-credit-card text-primary fa-3x"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Financiaciones</h5>
+                            <p class="card-text text-muted small">Gestiona planes de financiación</p>
+                            <a href="/financiaciones" class="btn btn-primary btn-sm mt-auto">Acceder</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comparativas -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="card border-0 shadow-sm h-100 rounded-3">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-balance-scale text-warning fa-3x"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Comparativas</h5>
+                            <p class="card-text text-muted small">Compara características de coches</p>
+                            <a href="/comparativas" class="btn btn-warning btn-sm mt-auto">Acceder</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roles -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="card border-0 shadow-sm h-100 rounded-3">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-lock text-info fa-3x"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Roles</h5>
+                            <p class="card-text text-muted small">Gestiona roles del sistema</p>
+                            <a href="/roles" class="btn btn-info btn-sm mt-auto">Acceder</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

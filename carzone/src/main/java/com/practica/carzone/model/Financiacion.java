@@ -21,8 +21,8 @@ public class Financiacion {
     private Double cuotaMensual;
     private String estado;
     
-    // RELACIÓN ONE-TO-ONE CON USUARIO (Lado poseedor de la FK)
-    // Se crea la columna 'usuario_id' en la tabla 'financiacion'.
+    // Relacion con usuario
+    // Se crea la columna 'usuario_id' en la tabla 'financiacion'
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "usuario_id", referencedColumnName = "id", nullable = false)
     private Usuario usuario;

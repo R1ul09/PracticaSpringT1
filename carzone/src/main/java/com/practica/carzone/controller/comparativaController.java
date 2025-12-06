@@ -27,6 +27,11 @@ public class comparativaController {
     @Autowired
     private ComparativaRepository comparativaRepository;
 
+    /**
+     * Obtiene y muestra el listado de todas las comparativas
+     * @param model modelo para pasar el listado de comparativas a la vista
+     * @return vista del listado de comparativas
+     */
     @GetMapping
     public String listaComparativas(Model model) {
 
@@ -37,6 +42,12 @@ public class comparativaController {
         return "secundarias/comparativa/lista";
     }
 
+    /**
+     * Elimina una comparativa del repositorio por su identificador
+     * @param id identificador único de la comparativa a eliminar
+     * @param redAttrib atributos para redirigir con mensajes flash
+     * @return redirección al listado de comparativas
+     */
     @GetMapping("/eliminar/{id}")
     public String removeComparativa(@PathVariable Long id, RedirectAttributes redAttrib) {
     
@@ -51,6 +62,11 @@ public class comparativaController {
         return "redirect:/citas";
     }
 
+    /**
+     * manda al formulario para crear una nueva comparativa
+     * @param model modelo para pasar la instancia de comparativa a la vista
+     * @return vista del formulario de creación de nueva comparativa
+     */
     @GetMapping("/nuevo")
     public String newComparativa(Model model) {
 
@@ -61,6 +77,11 @@ public class comparativaController {
         return "secundarias/comparativa/nuevo";
     }
 
+    /**
+     * Crea una nueva comparativa en el repositorio
+     * @param comparativa objeto Comparativa con los datos a guardar
+     * @return redirección al listado de comparativas
+     */
     @PostMapping("/crear")
     public String createComparativa(@ModelAttribute("comparativa") Comparativa comparativa) {
         
@@ -71,6 +92,12 @@ public class comparativaController {
         return "redirect:/comparativas";
     }
     
+    /**
+     * Manda al formulario de edición para una comparativa existente
+     * @param id identificador único de la comparativa a editar
+     * @param model modelo para pasar la comparativa a la vista
+     * @return vista del formulario de edición de comparativa
+     */
     @GetMapping("/editar/{id}")
     public String editComparativa(@PathVariable Long id, Model model) {
 
@@ -87,6 +114,12 @@ public class comparativaController {
         return "secundarias/comparativa/editar";
     }
 
+    /**
+     * Modifica los datos de una comparativa existente en el repositorio
+     * @param comparativa objeto Comparativa con los datos actualizados
+     * @param model modelo para pasar mensajes de error a la vista si es necesario
+     * @return redirección al listado de comparativas
+     */
     @PostMapping("/modificar")
     public String modifyComparativa(@ModelAttribute("comparativa") Comparativa comparativa, Model model) {
 

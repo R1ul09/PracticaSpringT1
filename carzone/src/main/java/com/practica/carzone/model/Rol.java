@@ -21,8 +21,8 @@ public class Rol {
 
     private String nombreRol;
 
-    // RELACIÓN ONE-TO-MANY CON USUARIO
-    // mappedBy="rol" indica que la columna de clave foránea está en la entidad Usuario.
+    // Relacion con usuario
+    // mappedBy="rol" indica que la columna de clave foránea está en la entidad Usuario
     @OneToMany(mappedBy = "rol", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Usuario> usuarios = new ArrayList<>();
 }

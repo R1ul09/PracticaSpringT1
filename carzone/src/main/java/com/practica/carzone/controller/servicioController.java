@@ -26,6 +26,11 @@ public class servicioController {
     @Autowired
     private ServicioRepository servicioRepository;
 
+    /**
+     * Obtiene y muestra el listado de todos los servicios
+     * @param model modelo para pasar el listado de servicios a la vista
+     * @return vista del listado de servicios
+     */
     @GetMapping
     public String listaServicios(Model model) {
 
@@ -36,6 +41,12 @@ public class servicioController {
         return "secundarias/servicio/lista";
     }
 
+    /**
+     * Elimina un servicio del repositorio por su identificador
+     * @param id identificador único del servicio a eliminar
+     * @param redAttrib atributos para redirigir con mensajes flash
+     * @return redirección al listado de servicios
+     */
     @GetMapping("/eliminar/{id}")
     public String removeServicio(@PathVariable Long id, RedirectAttributes redAttrib) {
     
@@ -50,6 +61,11 @@ public class servicioController {
         return "redirect:/servicios";
     }
 
+    /**
+     * Manda al formulario para crear un nuevo servicio
+     * @param model modelo para pasar la instancia de servicio a la vista
+     * @return vista del formulario de creación de nuevo servicio
+     */
     @GetMapping("/nuevo")
     public String newServicio(Model model) {
 
@@ -60,6 +76,11 @@ public class servicioController {
         return "secundarias/servicio/nuevo";
     }
 
+    /**
+     * Crea una nueva servicio en el repositorio
+     * @param servicio objeto Servicio con los datos a guardar
+     * @return redirección al listado de servicios
+     */
     @PostMapping("/crear")
     public String createServicio(@ModelAttribute("servicio") Servicio servicio) {
         
@@ -70,6 +91,12 @@ public class servicioController {
         return "redirect:/servicios";
     }
     
+    /**
+     * Manda al formulario de edición para un servicio existente
+     * @param id identificador único del servicio a editar
+     * @param model modelo para pasar el servicio a la vista
+     * @return vista del formulario de edición de servicio
+     */
     @GetMapping("/editar/{id}")
     public String editServicio(@PathVariable Long id, Model model) {
 
@@ -86,6 +113,12 @@ public class servicioController {
         return "secundarias/servicio/editar";
     }
 
+    /**
+     * Modifica los datos de un servicio existente en el repositorio
+     * @param servicio objeto Servicio con los datos actualizados
+     * @param model modelo para pasar mensajes de error a la vista si es necesario
+     * @return redirección al listado de servicios
+     */
     @PostMapping("/modificar")
     public String modifyServicio(@ModelAttribute("servicio") Servicio servicio, Model model) {
 

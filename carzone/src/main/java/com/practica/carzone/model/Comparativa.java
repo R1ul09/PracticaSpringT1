@@ -22,7 +22,7 @@ public class Comparativa {
     private String titulo;
     private LocalDate fechaCreacion;
 
-    // RELACIÓN MANY-TO-MANY CON COCHE (Lado Inverso)
+    // Relacion con coche
     // mappedBy="comparativas" indica que el mapeo lo hace el atributo 'comparativas' en la clase Coche.
     @ManyToMany(mappedBy = "comparativas")
     private List<Coche> coches = new ArrayList<>();

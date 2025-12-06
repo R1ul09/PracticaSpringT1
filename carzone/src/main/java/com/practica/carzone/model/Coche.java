@@ -35,12 +35,12 @@ public class Coche {
     @JoinColumn(name = "marca_id", nullable = true)
     private Marca marca;
 
-    // RELACIÓN MANY-TO-MANY CON COMPARATIVA (Lado poseedor de la tabla de unión)
+    // Relacion con concesionario
     @ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
-        name = "comparativa_coche", // Nombre de la tabla intermedia
-        joinColumns = @JoinColumn(name = "coche_id"), // Columna que referencia a ESTA entidad (Coche)
-        inverseJoinColumns = @JoinColumn(name = "comparativa_id") // Columna que referencia a la OTRA entidad (Comparativa)
+        name = "comparativa_coche",
+        joinColumns = @JoinColumn(name = "coche_id"),
+        inverseJoinColumns = @JoinColumn(name = "comparativa_id")
     )
     private List<Comparativa> comparativas = new ArrayList<>();
 }

@@ -40,6 +40,12 @@ public class cocheController {
     @Autowired
     private MarcaRepository marcaRepository;
 
+    /**
+     * Obtiene y muestra el listado paginado de coches.
+     * @param model modelo para pasar atributos a la vista
+     * @param pageable configuración de paginación con tamaño de página 5 y ordenado por id ascendente
+     * @return vista del listado de coches con la información paginada
+     */
     @GetMapping
     public String listaCoches(Model model, @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.ASC) Pageable pageable) {
         
@@ -52,6 +58,12 @@ public class cocheController {
         return "principales/coche/lista";
     }
     
+    /**
+     * Elimina un coche del repositorio por su id
+     * @param id identificador único del coche a eliminar
+     * @param redAttrib atributos para redirigir con mensajes flash de alerta
+     * @return redirige al listado de coches
+     */
     @GetMapping("/eliminar/{id}")
     public String removeCoche(@PathVariable Long id, RedirectAttributes redAttrib) {
     
@@ -66,6 +78,13 @@ public class cocheController {
         return "redirect:/coches";
     }
 
+    /**
+     * Elimina un coche desde la vista de detalles de marca
+     * @param marcaId identificador de la marca asociada
+     * @param cocheId identificador único del coche a eliminar
+     * @param redAttrib atributos para redirigir con mensajes flash de alerta
+     * @return redirige a la vista de detalles de la marca
+     */
     @GetMapping("/eliminarCoche/{marcaId}/{cocheId}")
     public String removeCocheVistaEdit(@PathVariable Long marcaId, @PathVariable Long cocheId, RedirectAttributes redAttrib) {
     
@@ -81,6 +100,12 @@ public class cocheController {
     }
     
 
+    /**
+     * Prepara el formulario para crear un nuevo coche cargando marcas disponibles
+     * @param redirectTarget parámetro opcional que especifica dónde redirigir después de crear (null=lista, "detalle"=detalle de marca)
+     * @param model modelo para pasar la instancia de coche y las marcas disponibles
+     * @return vista del formulario de creación de nuevo coche
+     */
     @GetMapping("/nuevo")
     public String newCoche( @RequestParam(required = false) String redirectTarget, Model model) {
         Coche coche = new Coche();
@@ -104,6 +129,12 @@ public class cocheController {
         return "principales/coche/nuevo";
     }
 
+    /**
+     * Crea un nuevo coche en bd
+     * @param coche objeto Coche con los datos a guardar
+     * @param redirectTarget parámetro opcional que determina el destino de redireccion
+     * @return redirige al listado de coches o al detalle de la marca
+     */
     @PostMapping("/crear")
     public String createCoche(@ModelAttribute("coche") Coche coche, @RequestParam(required = false) String redirectTarget) {
         
@@ -120,6 +151,13 @@ public class cocheController {
         }
     }
     
+    /**
+     * Prepara el formulario de edicion para un coche existente
+     * @param id identificador unico del coche a editar
+     * @param redirectTarget parametro opcional que especifica el destino de redireccion
+     * @param model modelo para pasar el coche y las marcas disponibles
+     * @return vista del formulario de edición de coche
+     */
     @GetMapping("/editar/{id}")
     public String editCoche(@PathVariable Long id, @RequestParam(required = false) String redirectTarget, Model model) {
 
@@ -150,6 +188,13 @@ public class cocheController {
         return "principales/coche/editar";
     }
 
+    /**
+     * Modifica los datos de un coche existente en el repositorio
+     * @param coche objeto Coche con los datos actualizados
+     * @param redirectTarget parámetro opcional que determina el destino de redireccion
+     * @param model modelo para pasar mensajes de error a la vista si es necesario
+     * @return redirige al listado de coches o al detalle de la marca
+     */
     @PostMapping("/modificar")
     public String modifyCoche(@ModelAttribute("coche") Coche coche, @RequestParam(required = false) String redirectTarget, Model model) {
 
@@ -168,6 +213,12 @@ public class cocheController {
         }
     }
 
+    /**
+     * Desasocia un coche de su marca actual estableciendo el campo de la relacion a null
+     * @param id identificador unico del coche a desasociar
+     * @param redAttrib atributos para redirigir con mensajes flash
+     * @return redirige al listado de coches
+     */
     @GetMapping("/desasociar/{id}")
     public String desasociarCochedeMarca(@PathVariable Long id, RedirectAttributes redAttrib) {
 
@@ -192,6 +243,13 @@ public class cocheController {
 
     }
 
+    /**
+     * para asociar un coche a una marca mandandolo al formulario de asociacion
+     * @param id identificador unico del coche a asociar
+     * @param model modelo para pasar el coche y las marcas disponibles
+     * @param redAttrib atributos para redirigir con mensajes flash
+     * @return vista del formulario de asociacion o redireccion al listado en caso de error
+     */
     @GetMapping("/asociar/{id}")
     public String asociarCocheAMarca(@PathVariable Long id, Model model, RedirectAttributes redAttrib) {
 
@@ -217,6 +275,12 @@ public class cocheController {
         return "fragments/asociar";
     }
 
+    /**
+     * Guarda la asociacion de un coche con una marca
+     * @param coche objeto Coche con la marca a asociar
+     * @param model modelo para pasar mensajes de error a la vista si es necesario
+     * @return redirige al listado de coches
+     */
     @PostMapping("/asociar/guardar")
     public String modifyCoche(@ModelAttribute("coche") Coche coche, Model model) {
         
@@ -229,12 +293,21 @@ public class cocheController {
         return "redirect:/coches";
     }
 
+    /**
+     * Realiza una búsqueda avanzada de coches filtrados por color y año
+     * También muestra coches caros de una marca específica mediante consulta JPQL
+     * @param color color del coche a buscar (parametro opcional)
+     * @param anioStr año limite para la búsqueda (parametro opcional)
+     * @param model modelo para pasar los resultados y parametros de busqueda a la vista
+     * @return vista de búsqueda avanzada con los resultados encontrados
+     */
     @GetMapping("/busquedaAvanzada")
     public String busquedaAvanzada(
         @RequestParam(value = "color", required = false) String color,
         @RequestParam(value = "anio", required = false) String anioStr,
         Model model) {
         
+        // el .of() crea una lista vacia para evitar null pointer exception
         List<Coche> listaCoches = List.of();
         
         // Convertir el año a Year para la consulta si está presente
@@ -261,7 +334,7 @@ public class cocheController {
         model.addAttribute("listaCoches", listaCoches);
 
         // Ejecución de la consulta JPQL con JOIN (Coches caros de Alemania)
-        // Usamos datos fijos para demostrar la funcionalidad JPQL
+        // Usamos datos fijos
         int precioMinimo = 20000;
         String paisOrigen = "Alemania";
         
@@ -274,6 +347,12 @@ public class cocheController {
         return "principales/coche/busquedaAvanzada";
     }
 
+    /**
+     * Obtiene y muestra estadísticas sobre los coches incluyendo el coche más caro
+     * y conteos por modelo
+     * @param model modelo para pasar las estadisticas a la vista
+     * @return vista de estadísticas con información agregada de coches
+     */
     @GetMapping("/estadisticas")
     public String mostrarEstadisticas(Model model) {
         
@@ -294,6 +373,13 @@ public class cocheController {
         return "principales/coche/estadisticas";
     }
 
+    /**
+     * Elimina coches del repositorio que tengan un año superior al especificado
+     * Este método ejecuta una operación transaccional de borrado
+     * @param anioStr año limite para eliminar coches (año > este valor)
+     * @param redAttrib atributos para redirigir con mensajes flash
+     * @return redirección al listado de coches
+     */
     @GetMapping("/borrarPorAnio")
     public String borrarPorAnio(@RequestParam(value = "anio", required = false) String anioStr, RedirectAttributes redAttrib) {
         

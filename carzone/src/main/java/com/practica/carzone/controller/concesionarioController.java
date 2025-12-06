@@ -26,6 +26,11 @@ public class concesionarioController {
     @Autowired
     private ConcesionarioRepository concesionarioRepository;
 
+    /**
+     * Obtiene y muestra el listado de todos los concesionarios
+     * @param model modelo para pasar el listado de concesionarios a la vista
+     * @return vista del listado de concesionarios
+     */
     @GetMapping
     public String listaConcesionarios(Model model) {
 
@@ -36,6 +41,12 @@ public class concesionarioController {
         return "secundarias/concesionario/lista";
     }
 
+    /**
+     * Elimina un concesionario del repositorio por su identificador
+     * @param id identificador único del concesionario a eliminar
+     * @param redAttrib atributos para redirigir con mensajes flash
+     * @return redirección al listado de concesionarios
+     */
     @GetMapping("/eliminar/{id}")
     public String removeConcesionario(@PathVariable Long id, RedirectAttributes redAttrib) {
     
@@ -50,6 +61,11 @@ public class concesionarioController {
         return "redirect:/concesionarios";
     }
 
+    /**
+     * Manda al formulario para crear un nuevo concesionario
+     * @param model modelo para pasar la instancia de concesionario a la vista
+     * @return vista del formulario de creación de nuevo concesionario
+     */
     @GetMapping("/nuevo")
     public String newConcesionario(Model model) {
 
@@ -60,6 +76,11 @@ public class concesionarioController {
         return "secundarias/concesionario/nuevo";
     }
 
+    /**
+     * Crea una nueva concesionario en el repositorio
+     * @param concesionario objeto Concesionario con los datos a guardar
+     * @return redirección al listado de concesionarios
+     */
     @PostMapping("/crear")
     public String createConcesionario(@ModelAttribute("concesionario") Concesionario concesionario) {
         
@@ -70,6 +91,12 @@ public class concesionarioController {
         return "redirect:/concesionarios";
     }
     
+    /**
+     * Manda al formulario de edición para un concesionario existente
+     * @param id identificador único del concesionario a editar
+     * @param model modelo para pasar el concesionario a la vista
+     * @return vista del formulario de edición de concesionario
+     */
     @GetMapping("/editar/{id}")
     public String editConcesionario(@PathVariable Long id, Model model) {
 
@@ -86,6 +113,12 @@ public class concesionarioController {
         return "secundarias/concesionario/editar";
     }
 
+    /**
+     * Modifica los datos de un concesionario existente en el repositorio
+     * @param concesionario objeto Concesionario con los datos actualizados
+     * @param model modelo para pasar mensajes de error a la vista si es necesario
+     * @return redirección al listado de concesionarios
+     */
     @PostMapping("/modificar")
     public String modifyConcesionario(@ModelAttribute("concesionario") Concesionario concesionario, Model model) {
 

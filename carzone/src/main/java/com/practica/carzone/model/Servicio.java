@@ -22,8 +22,8 @@ public class Servicio {
     private String descripcion;
     private Double precioBase;
 
-    // RELACIÓN MANY-TO-MANY CON CITA (Lado Inverso)
-    // mappedBy="servicios" indica que el mapeo lo hace el atributo 'servicios' en la clase Cita.
+    // Relacion con cita
+    // mappedBy="servicios" indica que el mapeo lo hace el atributo 'servicios' en la clase Cita
     @ManyToMany(mappedBy = "servicios")
     private List<Cita> citas = new ArrayList<>();
 }

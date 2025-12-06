@@ -31,6 +31,11 @@ public class financiacionController {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
+    /**
+     * Obtiene y muestra el listado de todas las financiaciones
+     * @param model modelo para pasar el listado de financiaciones a la vista
+     * @return vista del listado de financiaciones
+     */
     @GetMapping
     public String listaFinanciaciones(Model model) {
 
@@ -41,6 +46,12 @@ public class financiacionController {
         return "secundarias/financiacion/lista";
     }
 
+    /**
+     * Elimina una financiación del repositorio por su identificador
+     * @param id identificador único de la financiación a eliminar
+     * @param redAttrib atributos para redirigir con mensajes flash
+     * @return redirección al listado de financiaciones
+     */
     @GetMapping("/eliminar/{id}")
     public String removeFinanciacion(@PathVariable Long id, RedirectAttributes redAttrib) {
     
@@ -55,6 +66,11 @@ public class financiacionController {
         return "redirect:/financiaciones";
     }
 
+    /**
+     * Manda al formulario para crear una nueva financiación cargando usuarios.
+     * @param model modelo para pasar la instancia de financiación y la lista de usuarios
+     * @return vista del formulario de creación de nueva financiación
+     */
     @GetMapping("/nuevo")
     public String newFinanciacion(Model model) {
 
@@ -69,6 +85,11 @@ public class financiacionController {
         return "secundarias/financiacion/nuevo";
     }
 
+    /**
+     * Crea una nueva financiación en el repositorio
+     * @param financiacion objeto Financiacion con los datos a guardar
+     * @return redirección al listado de financiaciones
+     */
     @PostMapping("/crear")
     public String createFinanciacion(@ModelAttribute("financiacion") Financiacion financiacion) {
         
@@ -79,6 +100,12 @@ public class financiacionController {
         return "redirect:/financiaciones";
     }
     
+    /**
+     * Manda al formulario de edición para una financiación existente cargando usuarios.
+     * @param id identificador único de la financiación a editar
+     * @param model modelo para pasar la financiación y la lista de usuarios
+     * @return vista del formulario de edición de financiación
+     */
     @GetMapping("/editar/{id}")
     public String editFinanciacion(@PathVariable Long id, Model model) {
 
@@ -99,6 +126,12 @@ public class financiacionController {
         return "secundarias/financiacion/editar";
     }
 
+    /**
+     * Modifica los datos de una financiación existente en el repositorio
+     * @param financiacion objeto Financiacion con los datos actualizados
+     * @param model modelo para pasar mensajes de error a la vista si es necesario
+     * @return redirección al listado de financiaciones
+     */
     @PostMapping("/modificar")
     public String modifyFinanciacion(@ModelAttribute("financiacion") Financiacion financiacion, Model model) {
 

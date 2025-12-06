@@ -30,17 +30,17 @@ public class Usuario {
     private Long telefono;
     private String direccion;
 
-    // Relacion con rol (YA DESCOMENTADA)
+    // Relacion con rol
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "rol_id", referencedColumnName = "id", nullable = false)
     private Rol rol;
 
-    // Relacion con financiacion (YA DESCOMENTADA)
+    // Relacion con financiacion
     @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL)
     private Financiacion financiacion;
 
-    // RELACIÓN ONE-TO-MANY CON CITA
-    // mappedBy="usuario" indica que la columna de clave foránea está en la entidad Cita.
+    // Relacion con cita
+    // mappedBy="usuario" indica que la columna de clave foránea está en la entidad Cita
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Cita> citas = new ArrayList<>();
 }

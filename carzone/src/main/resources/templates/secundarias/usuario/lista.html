@@ -1,103 +1,123 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Listado de Usuarios</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuarios - Carzone</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body { background: #f7f8fc; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .navbar-custom { background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); }
+        .navbar-brand { font-weight: 700; font-size: 1.5rem; }
+        .nav-link { color: rgba(255, 255, 255, 0.85) !important; transition: color 0.3s ease; margin: 0 5px; }
+        .nav-link:hover, .nav-link.active { color: white !important; }
+        .container { background: white; border-radius: 12px; padding: 30px; margin-top: 30px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); }
+        h1 { color: #333; font-weight: 700; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
+        .btn-group-custom { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+        .btn-group-custom .btn { border-radius: 8px; font-weight: 600; transition: all 0.3s ease; }
+        .table { border-radius: 10px; overflow: hidden; }
+        .table thead { background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); color: white; }
+        .table thead th { border: none; font-weight: 600; padding: 15px; }
+        .table tbody tr:hover { background: #f5f5f5; }
+        .table tbody td { padding: 15px; vertical-align: middle; }
+        .btn-action { border-radius: 6px; font-size: 0.85rem; padding: 6px 12px; }
+        .badge { border-radius: 6px; padding: 8px 12px; font-weight: 600; }
+        .alert { border-radius: 10px; border: none; margin-bottom: 20px; }
+    </style>
 </head>
-
 <body>
-
-    <div th:replace="fragments/menu :: menuSuperior"></div>
-
-    <div class="container mt-4">
-
-        <div th:fragment="alertas">
-            <div th:if="${success}" class="alert alert-success alert-dismissible fade show" role="alert">
-                <span th:text="${success}"></span>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
-            </div>
-            <div th:if="${error}" class="alert alert-danger alert-dismissible fade show" role="alert">
-                <span th:text="${error}"></span>
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="/dashboard">
+                <i class="fas fa-car"></i> Carzone
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard"><i class="fas fa-home"></i> Dashboard</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li>
+                                <form action="/logout" method="POST" style="display: inline;">
+                                    <button type="submit" class="dropdown-item" style="border: none; background: none; cursor: pointer; color: #ff6b6b;">
+                                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <h1>Lista de Usuarios</h1>
-        <a th:href="@{/usuarios/nuevo}" class="btn btn-primary mb-3">Crear Usuario</a>
+    <!-- Main Content -->
+    <div class="container">
+        <h1><i class="fas fa-users"></i> Gestión de Usuarios</h1>
 
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Nombre y Apellido</th>
-                    <th>Email</th>
-                    <th>Teléfono</th>
-                    <th>Rol</th>
-                    <th>Eliminar</th>
-                    <th>Modificar</th>
-                </tr>
-            </thead>
+        <!-- Alerts -->
+        <div th:if="${success}" class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="fas fa-check-circle"></i> <span th:text="${success}"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        <div th:if="${error}" class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="fas fa-exclamation-circle"></i> <span th:text="${error}"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
 
-            <tbody>
-                <tr th:each="usuario : ${usuarios}">
-                    <td th:text="${usuario.nombre + ' ' + usuario.apellidos}"></td>
-                    <td th:text="${usuario.email}"></td>
-                    <td th:text="${usuario.telefono}"></td>
-                    <td th:text="${usuario.rol.nombreRol}"></td>
+        <!-- Action Buttons -->
+        <div class="btn-group-custom">
+            <a th:href="@{/usuarios/nuevo}" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Crear Usuario
+            </a>
+        </div>
 
-                    <td>
-                        <a th:href="@{/usuarios/eliminar/{id}(id=${usuario.id})}" class="btn btn-danger btn-sm"
-                            data-bs-toggle="modal" data-bs-target="#confirmDeleteModal" th:data-id="${usuario.id}">Eliminar
-                        </a>
-                    </td>
-
-                    <td>
-                        <a th:href="@{/usuarios/editar/{id}(id=${usuario.id})}" class="btn btn-secondary btn-sm">
-                            Modificar
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel">Confirmar Eliminación</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ¿Estás seguro de que deseas eliminar el Usuario con ID: <strong id="entidadId"></strong>?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <a href="#" id="confirmDeleteButton" class="btn btn-danger">Eliminar Usuario</a>
-                </div>
-            </div>
+        <!-- Table -->
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th><i class="fas fa-id-badge"></i> Nombre</th>
+                        <th><i class="fas fa-envelope"></i> Email</th>
+                        <th><i class="fas fa-phone"></i> Teléfono</th>
+                        <th><i class="fas fa-shield"></i> Rol</th>
+                        <th colspan="2" style="text-align: center;"><i class="fas fa-cogs"></i> Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="usuario : ${usuarios}">
+                        <td><strong th:text="${usuario.nombre + ' ' + usuario.apellidos}"></strong></td>
+                        <td th:text="${usuario.email}"></td>
+                        <td th:text="${usuario.telefono}"></td>
+                        <td><span class="badge bg-primary" th:text="${usuario.rol.nombreRol}"></span></td>
+                        <td>
+                            <a th:href="@{/usuarios/editar/{id}(id=${usuario.id})}" class="btn btn-sm btn-warning btn-action">
+                                <i class="fas fa-edit"></i> Editar
+                            </a>
+                        </td>
+                        <td>
+                            <a th:href="@{/usuarios/eliminar/{id}(id=${usuario.id})}" class="btn btn-sm btn-danger btn-action"
+                               onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">
+                                <i class="fas fa-trash"></i> Eliminar
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-
-    <script>
-        let confirmDeleteModal = document.getElementById('confirmDeleteModal');
-
-        confirmDeleteModal.addEventListener('show.bs.modal', function (event) {
-            let button = event.relatedTarget;
-            let entidadId = button.getAttribute('data-id');
-
-            let modalEntidadId = confirmDeleteModal.querySelector('#entidadId');
-            let confirmDeleteButton = confirmDeleteModal.querySelector('#confirmDeleteButton');
-
-            modalEntidadId.textContent = entidadId;
-            confirmDeleteButton.href = '/usuarios/eliminar/' + entidadId;
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

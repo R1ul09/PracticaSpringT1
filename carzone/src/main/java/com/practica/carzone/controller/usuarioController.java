@@ -31,6 +31,11 @@ public class usuarioController {
     @Autowired
     private RolRepository rolRepository;
 
+    /**
+     * Obtiene y muestra el listado de todos los usuarios
+     * @param model modelo para pasar el listado de usuarios a la vista
+     * @return vista del listado de usuarios
+     */
     @GetMapping
     public String listaUsuarios(Model model) {
 
@@ -41,6 +46,12 @@ public class usuarioController {
         return "secundarias/usuario/lista";
     }
 
+    /**
+     * Elimina un usuario del repositorio por su identificador
+     * @param id identificador único del usuario a eliminar
+     * @param redAttrib atributos para redirigir con mensajes flash
+     * @return redirección al listado de usuarios
+     */
     @GetMapping("/eliminar/{id}")
     public String removeUsuario(@PathVariable Long id, RedirectAttributes redAttrib) {
     
@@ -55,6 +66,11 @@ public class usuarioController {
         return "redirect:/usuarios";
     }
 
+    /**
+     * Manda al formulario para crear un nuevo usuario cargando roles disponibles
+     * @param model modelo para pasar la instancia de usuario y la lista de roles
+     * @return vista del formulario de creación de nuevo usuario
+     */
     @GetMapping("/nuevo")
     public String newUsuario(Model model) {
 
@@ -69,6 +85,11 @@ public class usuarioController {
         return "secundarias/usuario/nuevo";
     }
 
+    /**
+     * Crea una nueva usuario en el repositorio
+     * @param usuario objeto Usuario con los datos a guardar
+     * @return redirección al listado de usuarios
+     */
     @PostMapping("/crear")
     public String createUsuario(@ModelAttribute("usuario") Usuario usuario) {
         
@@ -79,6 +100,12 @@ public class usuarioController {
         return "redirect:/usuarios";
     }
     
+    /**
+     * Manda al formulario de edición para un usuario existente cargando roles disponibles
+     * @param id identificador único del usuario a editar
+     * @param model modelo para pasar el usuario y la lista de roles
+     * @return vista del formulario de edición de usuario
+     */
     @GetMapping("/editar/{id}")
     public String editUsuario(@PathVariable Long id, Model model) {
 
@@ -99,6 +126,12 @@ public class usuarioController {
         return "secundarias/usuario/editar";
     }
 
+    /**
+     * Modifica los datos de un usuario existente en el repositorio
+     * @param usuario objeto Usuario con los datos actualizados
+     * @param model modelo para pasar mensajes de error a la vista si es necesario
+     * @return redirección al listado de usuarios
+     */
     @PostMapping("/modificar")
     public String modifyUsuario(@ModelAttribute("usuario") Usuario usuario, Model model) {
 

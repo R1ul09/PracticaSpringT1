@@ -26,8 +26,8 @@ public class Marca {
     private String sedeCentral;
     private int numModelosActivos;
 
-    // RELACIÓN ONE-TO-MANY CON COCHE
-    // mappedBy="marca" indica que la columna de clave foránea está en la entidad Coche.
+    // Relacion con coche
+    // mappedBy="marca" indica que la columna de clave foránea está en la entidad Coche
     @OneToMany(mappedBy = "marca", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Coche> coches = new ArrayList<>();
 }

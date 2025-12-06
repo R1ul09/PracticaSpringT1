@@ -23,8 +23,8 @@ public class Concesionario {
     private String direccion;
     private String telefono;
 
-    // RELACIÓN ONE-TO-MANY CON CITA
-    // mappedBy="concesionario" indica que la columna de clave foránea está en la entidad Cita.
+    // Relacion con cita
+    // mappedBy="concesionario" indica que la columna de clave foránea está en la entidad Cita
     @OneToMany(mappedBy = "concesionario", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Cita> citas = new ArrayList<>();
 }
